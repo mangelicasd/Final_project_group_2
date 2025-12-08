@@ -1,0 +1,188 @@
+/* font families 
+font-family: "Open Sans", sans-serif;
+font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 100; 300, 400, 700, 900
+font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 100; */
+/*navigation - hidden*/
+:root {
+    /* typography */
+    --primary-font: "Lato", Arial, Helvetica, sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
+    --font-size-s: 1.2rem;
+    --font-size-m: 2rem;
+    --font-size-l: 3rem;
+    --fw-xs: 100;
+    --fw-s: 300;
+    --fw-m: 400;
+    --fw-b: 700;
+    --fw-xb: 900;
+    --fs-base: 1rem;
+    
+    /* colors */
+    
+    --primary-clr-dark: #0A2E4E;
+    --primary-clr-light: #0EA5E9;
+    --accent-clr: #F4B400;
+    --neutral-lt-color: #E6E9ED;
+    --neutral-mid-color: #969CA6;
+    
+    --base-space: 10px;
+    
+     /* helpers */
+    --spacer: 1rem;
+    --spacer-dbl: calc(var(--spacer) * 2);
+    --border-radius: 6px;
+    --shadow: 5px 5px 8px #F4B400;
+    --margin-left: 2rem;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    width: 100%;
+}
+section.nav {
+    background-color: var(--primary-clr-dark);
+    box-shadow: var(--shadow);
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-s);
+    font-weight: var(--fw-xs);
+    color: var(--primary-clr-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+section.nav img {
+    height: 125px;
+    width: auto;
+    margin-left: var(--margin-left);
+}
+section.nav a {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+nav.top {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+}
+.topnav li {
+    padding: 0.2rem;
+}
+.topnav li a {
+    display: block;
+    text-decoration: none;
+    background: var(--primary-clr-light);
+    font-weight: var(--fw-b);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+.navToggler:checked ~ nav.top {
+    display: block;
+}
+.navToggler {
+    display: none;
+}
+.navTogglerMenu {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 3rem;
+    order: 1;
+    padding-right: 4rem;
+}
+.navTogglerMenu i {
+    color: #fff;
+    font-size: 2rem;          
+    cursor: pointer; 
+}
+
+.menuClose {
+    display: none;
+}
+.topnav li a:visited, .history a.bt:visited, .elements a.bt:visited, .structure a.bt:visited, .molecule a.bt:visited, .about .btn:visited, .materials .btn:visited, .elements .btn:visited, .structure .btn:visited, .classes .btn:visited { color: var(--primary-clr-dark); }
+
+.topnav li a:hover, .history a.bt:hover, .elements a.bt:hover, .structure a.bt:hover, .molecule a.bt:hover, .about .btn:hover, .materials .btn:hover, .elements .btn:hover, .structure .btn:hover, .classes .btn:hover { color: red; }
+
+.topnav li a:active, .history a.bt:active, .elements a.bt:active, .structure a.bt:active, .molecule a.bt:active, .about .btn:active, .materials .btn:active, .elements .btn:active, .structure .btn:active, .classes .btn:active { color: green; }
+/*end of top navigation */
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: var(--primary-clr-dark);
+    font-family: var(--secondary-font);
+    box-shadow: var(--shadow);
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 2rem;    
+}
+section.footer >article {
+    display: inline-block;
+}
+section.footer {
+    grid-template-columns: repeat(5, 1fr);
+}
+section.footer article li {
+    margin-bottom: 1rem;
+}
+.bottom_logos {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom_logos img {
+    height: 125px;
+    width: auto;
+}
+
+/* target screens between 676px and 970px, targets tablets*/
+
+@media (min-width: 676px) {
+    
+
+    .navToggler, .navTogglerMenu, .menuOpen, .menuClosed {
+        display: none;
+    }
+    nav.top {
+        position: static;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        background-color: transparent;
+     
+    }
+    ul.topnav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .topnav li a {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--primary-clr-dark);
+        font-weight: var(--fw-b);
+        background-color: var(--accent-clr);
+        padding: 0.8rem 1.2rem;
+        border-radius: 30px;
+        text-decoration: none;
+    }
+    .topnav li:nth-child(5) { width: 12rem; } /*to about going in two lines*/
+}
