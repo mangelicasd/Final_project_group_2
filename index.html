@@ -1,106 +1,197 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" >
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="css/reset.css" >
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home Page</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <!-- fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+         rel="stylesheet" />
 
-        <!-- logos -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+      <!-- logos -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 
-         <link rel="stylesheet" href="css/style.css" >
-    </head>
-
-    <body>
-       <section class="nav">
-            <img src="images/white_logo.png" alt="logo">
-            
-            <!--hidden checkbox for toggle -->
-            <input type="checkbox" class="navToggler" id="navToggler" />
-            
-               <nav class="top">
-               <ul class="topnav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/Products.html">Products</a></li>
-                <li><a href="pages/Support.html">Support</a></li>
-                <li><a href="pages/Client_promise.html">PNX Promise</a></li>
-                <li><a href="pages/About_Us.html">About Us</a></li>
-                <li><a href="pages/My_account.html">My account</a></li>
-               </ul>
-            </nav>
-            <!--hamburger icon as label-->
-            <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
-            <span class="material-icons-outline mi menuOpen"></span>
-            <span class="material-icons-outline mi menuClosed"></span>
-        </section>
-
+      <link rel="stylesheet" href="css/style.css" />
+      
+      <script src="../scripts/jq-min.js"></script>
         
-      <header>
-          
-      </header>  
-       
-       <main>
-           
-       </main>
-       
-       <footer>
-           <section class="footer">
-            <article>
-                <ul >
-                   <li>Lead Materials</li>
-                   <li>Surgical RAdiation Gloves</li>
-                   <li>Lead Glass</li>
-                   <li>X-ray Test Meters</li>
-                   <li>System Test Phantoms</li>
-                   <li>X-Ray Table Pads</li>
-                   <li>Silver Recovery Systems</li>
-               </ul>
+        <script>
+            $(document).ready(function(){
+                // $(selector).action();
+                
+            });
+        </script>
+        
+   </head>
+
+   <body>
+      <section class="nav">
+         <img src="images/white_logo.png" alt="logo" />
+
+         <!--hidden checkbox for toggle -->
+         <input type="checkbox" class="navToggler" id="navToggler" />
+
+         <nav class="top">
+            <ul class="topnav">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="pages/Products.html">Products</a></li>
+               <li><a href="pages/Support.html">Support</a></li>
+               <li><a href="pages/Client_promise.html">PNX Promise</a></li>
+               <li><a href="pages/About_Us.html">About Us</a></li>
+               <li><a href="pages/My_account.html">My account</a></li>
+            </ul>
+         </nav>
+
+         <!--hamburger icon as label-->
+         <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
+
+         <!--search button-->
+         <img src="images/search-button-with-m.png" alt="logo" class="nav-logo-right" />
+
+         <span class="material-icons-outline mi menuOpen"></span>
+         <span class="material-icons-outline mi menuClosed"></span>
+      </section>
+
+      <header class="hero">
+         <section class="hero-text">
+            <h1>Our Mission</h1>
+            <p>
+               At Pacific Northwest X-Ray (PNX), we deliver high-performance solutions that help providers assess,
+               diagnose, and act confidently. Our products are built for reliability, clarity, and ease of use, while
+               our support only begins at installation or purchase. From clinics to hospital networks, PNX provides
+               expert advice, maintenance, and guidance to our long-term clients to keep them performing at their very
+               best.
+            </p>
+         </section>
+      </header>
+
+      <main>
+         <section class="six-articles">
+            <article class="feature-products">
+               <h2>Featured Products</h2>
+               <figure>
+                  <img src="images/feature_products.jpg" alt="large_mri" />
+               </figure>
+               <p>
+                  Discover precision x-ray systems designed for clarity, reliability, and seamless integration...
+                  supporting confident diagnoses, efficient workflows, and elevated care at clinics, hospitals, and
+                  imaging centers.
+               </p>
+               <p><a href="" class="btn">View Systems</a></p>
             </article>
-            <article>
-                <ul>
-                   <li>Preventative Maintenance</li>
-                   <li>On-site Installation</li>
-                   <li>Equipment training</li>
-                   <li>Services & Repairs</li>
-               </ul>
+            <article class="Equipment">
+               <h2>Equipment & Accessories</h2>
+               <figure>
+                  <img src="images/Equipment_and_accesories.jpg" alt="white_instrument" />
+               </figure>
+               <p>
+                  Enhance imaging with precision accessories, detectors, positioning aids, stands, and protective gear,    engineered for compatibility, safety, and efficiency. Each component supports dependable results, streamlined workflows, and diagnostic confidence.
+               </p>
+               <p><a href="" class="btn">Browse Accessories</a></p>
             </article>
-            <article>
-                <ul>
-                   <li>Apply Now</li>
-                   <li>Get Quote</li>
-               </ul>
+            <article class="whyPNX">
+               <h2>Why PNX?</h2>
+               <figure>
+                  <img src="images/why_PNX.jpg" alt="man_observing_computerxray" />
+               </figure>
+               <p>
+                  PNX delivers clarity, reliability, and support. Trusted for precision and ease, our Pacific Northwest roots ensure technical excellence, responsive service, insightful imaging, and enduring partnerships that empower providers and elevate care.
+               </p>
+               <p><a href="" class="btn">PNX Difference</a></p>
             </article>
-            <article>
-                <ul>
-                   <li>Call Us</li>
-                   <li>Email</li>
-                   <li>Chat Now</li>
-               </ul>
+            <article class="customer">
+               <h2>Customer Support</h2>
+               <figure>
+                  <img src="images/customer_support.jpg" alt="man_installing_instruments" />
+               </figure>
+               <p>
+                  PNX is your imaging partner, offering installation, training, maintenance, and upgrades. With fast response, expert guidance, and reliable support, we keep systems sharp, staff confident, and care uninterrupted for lasting success.
+               </p>
+               <p><a href="" class="btn">Get Support</a></p>
             </article>
-            <article>
-                <ul>
-                   <li>Locations</li>
-                   <li>Reviews</li>
-                   <li>On Brands</li>
-                   <li>Customer Case Studies</li>
-               </ul>
+            <article class="testimonials">
+               <h2>Testimonials & Case Studies</h2>
+               <figure>
+                  <img src="images/testimonials_and_case_studies.jpg" alt="man_and_woman_and_xray" />
+               </figure>
+               <p>
+                 PNX case studies showcase real impact, trusted by clinics and hospitals for clarity, reliability, and support. Providers report improved workflows, faster diagnoses, lasting satisfaction, and confident results.
+               </p>
+               <p><a href="" class="btn">Read stories</a></p>
             </article>
+            <article class="certification">
+               <h2>Certification & Compliance</h2>
+               <figure>
+                  <img src="images/certifications.jpg" alt="book_of_compliance" />
+               </figure>
+               <p>
+                 PNX systems meet global standards with FDA clearance, CE marking, ISO-certified processes, and HIPAA-aware protocols, ensuring secure, reliable imaging, transparent documentation, expert support, and trusted compliance for providers worldwide.
+               </p>
+               <p><a href="" class="btn">Standards</a></p>
+            </article>
+            
+         </section>
+      </main>
+
+      <footer>
+         <section class="footer">
             <div class="bottom_logos">
                <img src="images/white_logo.png" alt="logo" />
-               <img src="images/a%20flat%20icon%20set%20for%20.png" alt="Social media" />
+               <img src="images/a-flat-icon-set-for.png" alt="Social media" />
             </div>
-            
-        </section>
-        
-       </footer>
-        
-                  
-    </body>
+            <section class="footer_articles">
+               <article>
+                  <h3>Product Catalog</h3>
+                  <ul>
+                     <li>Equipment</li>
+                     <li>Supplies</li>
+                     <li>Parts</li>
+                  </ul>
+               </article>
+               <article>
+                  <h3>Services and Support</h3>
+                  <ul>
+                     <li>Service Programs</li>
+                     <li>Service Request</li>
+                  </ul>
+               </article>
+               <article>
+                  <h3>PNX Promise</h3>
+                  <ul>
+                     <li>Client Guarantee</li>
+                     <li>Return Policy</li>
+                     <li>Financing</li>
+                  </ul>
+               </article>
+               <article>
+                  <h3>About Us</h3>
+                  <ul>
+                     <li>Overview</li>
+                     <li>Testimonials</li>
+                     <li>Locations</li>
+                  </ul>
+               </article>
+               <article>
+                  <h3>My account</h3>
+                  <ul>
+                     <li>History</li>
+                     <li>Favorites</li>
+                     <li>Payment Details</li>
+                     <li>Order Status</li>
+                  </ul>
+               </article>
+            </section>
+
+            <a href="pages/website_map.html" class="sitemap_btn">Website Map</a>
+            <p class="sell">We Do Not Share Your Information</p>
+            <p class="copyright">&copy; 1997-2025 Pacific Northwest X-Ray Inc. All Rights Reserved</p>
+         </section>
+      </footer>
+   </body>
 </html>
