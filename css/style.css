@@ -204,6 +204,7 @@ section.about_us_text img {
 
 /* main */
 
+
 .six-articles {
     min-height: celc(100vh - var(--header-height));
     grid-template-columns: 1fr;
@@ -279,6 +280,7 @@ a.btn {
     flex-direction: column;
     align-items: center;
     gap: 1rem; 
+    /* margin-top: 125px; use this to show the footer in the pages without main*/
 }
 .footer p.sell { font-style: italic; font-size: 3rem; }
 
