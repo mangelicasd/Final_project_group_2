@@ -110,11 +110,10 @@ nav.top {
 .menuClose {
     display: none;
 }
-.topnav li a:visited, .history a.bt:visited, .elements a.bt:visited, .structure a.bt:visited, .molecule a.bt:visited, .about .btn:visited, .materials .btn:visited, .elements .btn:visited, .structure .btn:visited, .classes .btn:visited { color: var(--primary-clr-dark); }
-
-.topnav li a:hover, .history a.bt:hover, .elements a.bt:hover, .structure a.bt:hover, .molecule a.bt:hover, .about .btn:hover, .materials .btn:hover, .elements .btn:hover, .structure .btn:hover, .classes .btn:hover { color: red; }
-
-.topnav li a:active, .history a.bt:active, .elements a.bt:active, .structure a.bt:active, .molecule a.bt:active, .about .btn:active, .materials .btn:active, .elements .btn:active, .structure .btn:active, .classes .btn:active { color: green; }
+.topnav li a:link { color: var(--primary-clr-dark); }
+.topnav li a:visited { color: var(--primary-clr-dark); }
+.topnav li a:hover { color: red; }
+.topnav li a:active { color: green; }
 
 .nav-logo-right {
     display: none;
@@ -411,9 +410,117 @@ section.facts ul {
     list-style-position: inside;
 }
 
+/* ------------------------------------  Site map------------------------------------ */
+/* header map site */
 
 
-/* target screens with min 676px, targets tablets*/
+header.map h2 {
+    padding: 200px 1.5rem 1.5rem;
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    color: var(--primary-clr-dark);
+    background: var(--neutral-lt-color);
+    display: flex;
+    justify-content: center; 
+    box-shadow: var(--shadow);
+}
+
+/* sitemap section styling */
+.map_main {
+    padding: 4rem 2rem;
+}
+section.map_items {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+section.map_items h2 {
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    background: var(--primary-clr-dark);
+    color: var(--neutral-lt-color);
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+/* pyramid style items */
+section.map_items ul {
+    font: var(--fw-b) var(--font-size-m)/1.5 var(--secondary-font);
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; 
+    
+}
+section.map_items li {
+    position: relative;
+    padding: 0 .5rem 1rem;
+    background: var(--neutral-lt-color);
+    border-radius: var(--border-radius);
+    min-width: 120px;
+    margin: 1rem 0;
+}
+/* Nested lists */
+section.map_items ul ul {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 1rem;  
+}
+section.map_items ul ul ul {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+}
+
+section.map_items ul ul ul li{
+    
+    border: 1px solid var(--primary-clr-dark);
+    color: var(--primary-clr-dark);
+    font-weight: var(--fw-b);
+    background-color: var(--accent-clr);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    padding: 1rem;   
+}
+section.map_items a {
+    text-decoration: none;
+    color: var(--primary-clr-dark);
+}
+
+section.map_items a:link { color: var(--primary-clr-dark); }
+section.map_items a:visited { color: var(--primary-clr-dark); }
+section.map_items a:hover { color: red; }
+section.map_items a:active { color: green; }
+/* connector lines */
+
+
+section.map_items ul ul::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* aligns with parent’s vertical line */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ccc;
+}
+section.map_items ul ul ul li::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 3px;
+    height: 20px;
+    background: #ccc;
+}
+
+
+/* ---------------- target screens with min 676px, targets tablets ------------------ */
 
 @media (min-width: 676px) {
     
@@ -585,6 +692,13 @@ section.facts ul {
     .footer article {
         display: block;
     }
+    footer a {
+        text-decoration: none;
+    }
+    footer a:link { color: #fff; }
+    footer a:visited { color: var(--primary-clr-light); }
+    footer a:hover { color: red; }
+    footer a:active { color: green; }
 }
 
 
