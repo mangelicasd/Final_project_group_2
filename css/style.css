@@ -333,7 +333,7 @@ section.footer h3 {
 }
 .footer p {
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 
@@ -341,7 +341,7 @@ section.footer h3 {
 
 .three-articles {
     background-color: rgba(244, 180, 0, 0.37);
-    padding: 2rem;
+    padding: 4rem;
     display: grid;
     grid-template-columns: 1fr;
     box-sizing: border-box;
@@ -804,6 +804,7 @@ section.map_items ul ul ul li::before {
         justify-content: center;
         margin: 0 auto;
     }
+    
     
     /* main */
     .six-articles {
