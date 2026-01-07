@@ -88,6 +88,7 @@ nav.top {
 .topnav li a {
     display: block;
     text-decoration: none;
+    text-align: center;
     background: var(--primary-clr-light);
     font-weight: var(--fw-b);
     padding: 1rem;
@@ -208,7 +209,11 @@ section.about_us_text img {
 
 /* main */
 
-main { padding-top: var(--nav-height); }
+main { 
+    margin-top: var(--nav-height) auto 0;
+    padding: 2rem;
+    max-width: 1400px;
+}
 
 .six-articles {
     min-height: celc(100vh - var(--header-height));
