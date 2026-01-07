@@ -39,7 +39,11 @@ font-family: "Lato", sans-serif;
     --border-radius: 10px;
     --shadow: 5px 5px 8px #F4B400;
     --margin-left: 2rem;
+    
+    /* Nav height */
+    --nav-height: 125px;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -60,7 +64,7 @@ section.nav {
     position: fixed;
     z-index: 100;
     width: 100%;
-    margin-bottom: 200px;
+
 }
 section.nav img {
     height: 125px;
@@ -204,6 +208,7 @@ section.about_us_text img {
 
 /* main */
 
+main { padding-top: var(--nav-height); }
 
 .six-articles {
     min-height: celc(100vh - var(--header-height));
@@ -525,7 +530,7 @@ section.map_items ul ul ul li::before {
 
 @media (min-width: 676px) {
     
-
+    :root {--nav-height: 242px; }
     .navToggler, .navTogglerMenu, .menuOpen, .menuClosed {
         display: none;
     }
@@ -707,6 +712,7 @@ section.map_items ul ul ul li::before {
 
     
     @media (min-width: 970px) {
+    :root { --nav-height: 152px; }  
     nav.top {
         position: static;
         display: flex;
