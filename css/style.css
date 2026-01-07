@@ -60,6 +60,7 @@ section.nav {
     position: fixed;
     z-index: 100;
     width: 100%;
+    margin-bottom: 200px;
 }
 section.nav img {
     height: 125px;
