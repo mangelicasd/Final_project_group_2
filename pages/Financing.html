@@ -1,57 +1,155 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" >
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Financing</title>
-        <link rel="stylesheet" href="../css/reset.css" >
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financing</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
 
-        <!-- logos -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-        
-        <link rel="stylesheet" href="../css/style.css" >
-    </head>
-    
-    <body>
-       <section class="nav">
-            <img src="images/white_logo.png" alt="logo" />
-            
-            <!--hidden checkbox for toggle -->
-            <input type="checkbox" class="navToggler" id="navToggler" />
-            
-               <nav class="top">
-               <ul class="topnav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/Products.html">Products</a></li>
-                <li><a href="../pages/Support.html">Support</a></li>
-                <li><a href="../pages/PNX_promise.html">PNX Promise</a></li>
-                <li><a href="../pages/About_Us.html">About Us</a></li>
-                <li><a href="../pages/My_account.html">My account</a></li>
-               </ul>
-            </nav>
-            <!--hamburger icon as label-->
-            <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
-            <!--search button-->
-            <img src="../images/search-button-with-m.png" alt="logo" class="nav-logo-right">
-            
-            <span class="material-icons-outline mi menuOpen"></span>
-            <span class="material-icons-outline mi menuClosed"></span>
-        </section>
-        
-      <header>
-          
-      </header>  
-       
-       <main>
-           <!--Carlos to add here-->
-       </main>
-       
-       <footer>
+    <!-- logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <section class="nav">
+      <img src="../images/white_logo.png" alt="logo" />
+
+      <!--hidden checkbox for toggle -->
+      <input type="checkbox" class="navToggler" id="navToggler" />
+
+      <nav class="top">
+        <ul class="topnav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/Products.html">Products</a></li>
+          <li><a href="../pages/Support.html">Support</a></li>
+          <li><a href="../pages/PNX_promise.html">PNX Promise</a></li>
+          <li><a href="../pages/About_Us.html">About Us</a></li>
+          <li><a href="../pages/My_account.html">My account</a></li>
+        </ul>
+      </nav>
+      <!--hamburger icon as label-->
+      <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
+      <!--search button-->
+      <img src="../images/search-button-with-m.png" alt="logo" class="nav-logo-right" />
+
+      <span class="material-icons-outline mi menuOpen"></span>
+      <span class="material-icons-outline mi menuClosed"></span>
+    </section>
+
+    <header></header>
+
+    <main>
+      <!--Carlos to add here-->
+
+      <h1 id="finaceForm">Apply For Finacing</h1>
+      <form action="https://api.example.com/submit" method="post">
+        <label for="amount">Loan Amount (USD): $</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          min="0.01"
+          max="500000.00"
+          step="0.01"
+          placeholder="0.00"
+          required />
+
+        <label for="terms">Term:</label>
+        <select id="terms">
+          <option disabled>-Select one-</option>
+          <option>12 months</option>
+          <option>24 months</option>
+          <option>36 months</option>
+          <option>48 months</option>
+          <option>60 months</option>
+        </select>
+        <br />
+        <br />
+        <label for="name" id="name-label">Name:</label>
+        <input id="name" type="text" placeholder="John Doe" name="name" required />
+
+        <label for="email" id="email-label">Email:</label>
+        <input id="email" type="email" placeholder="example@email.com" name="email" required />
+        <br />
+        <br />
+        <label for="business-name" id="business-name-label">Business Name:</label>
+        <input id="business-name" type="text" placeholder="Medical Company" name="business-name" required />
+
+        <label for="phone"> Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
+        <br />
+        <br />
+        <label for="business-address">Business Address</label>
+        <input type="text" id="business-address" name="business-address" />
+        <br />
+        <br />
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" />
+
+        <label for="state-province">State / Province</label>
+        <input type="text" id="state-province" name="state-province" />
+        <br />
+        <br />
+        <label for="postal-zipcode">Postal / Zip Code</label>
+        <input type="text" id="postal-zipcode" name="postal-zipcode" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <label for="home-address">Home Address</label>
+        <input type="text" id="home-address" name="home-address" />
+        <br />
+        <br />
+        <label for="home-city">City</label>
+        <input type="text" id="home-city" name="home-city" />
+
+        <label for="home-state-province">State / Province</label>
+        <input type="text" id="home-state-province" name="home-state-province" />
+        <br />
+        <br />
+        <label for="home-postal-zipcode">Postal / Zip Code</label>
+        <input type="text" id="home-postal-zipcode" name="home-postal-zipcode" />
+
+        <br />
+        <br />
+        <br />
+
+        <p>
+          You understand that by clicking on the I AGREE checkbox immediately following this notice, under the Fair
+          Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such information to conduct a
+          pre-qualification for credit. Furthermore, if it is determined that you pre-qualify for a loan product you are
+          also authorizing the release of business and/or personal credit information to Pacific Northwest X-Ray Inc.,
+          its affiliates, or assignees including, one or more alternate third-party funding providers, Pacific Northwest
+          X-Ray Inc. funding sources, and its and their third-party service providers for purpose of extending credit. I
+          understand that this does not obligate me in any way to purchase equipment. I certify that I am a business
+          owner that is personally liable for the business.
+        </p>
+        <br />
+        <br />
+
+        <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" />
+        <label for="i-agree">I AGREE</label>
+        <br />
+        <br />
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+        <br />
+        <br />
+        <hr />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer>
       <section class="footer">
         <div class="bottom_logos">
           <img src="../images/white_logo.png" alt="logo" />
@@ -104,7 +202,5 @@
         <p class="copyright">&copy; 1997-2025 Pacific Northwest X-Ray Inc. All Rights Reserved</p>
       </section>
     </footer>
-        
-                  
-    </body>
+  </body>
 </html>
