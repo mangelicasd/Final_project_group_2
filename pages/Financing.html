@@ -51,121 +51,126 @@
       <!--Carlos to add here-->
 
       <h1 id="finaceForm">Apply For Finacing</h1>
-      
+
       <form action="https://api.example.com/submit" method="post" id="formMain">
-      
-       <div class="form-group-LA/T"> <!-- New div -->
-       
-        <label for="amount">Loan Amount (USD) $</label>
-        <input
-          type="number"
-          id="amount"
-          name="amount"
-          min="0.01"
-          max="500000.00"
-          step="0.01"
-          placeholder="0.00"
-          required />
+        <div class="form-group-LA/T">
+          <!-- New div -->
 
-        <label for="terms">Term</label>
-        <select id="terms">
-          <option disabled>-Select one-</option>
-          <option>12 months</option>
-          <option>24 months</option>
-          <option>36 months</option>
-          <option>48 months</option>
-          <option>60 months</option>
-        </select>
-        
-        </div> <!-- div END -->
-        
-        <div class="form-group-NE"> <!-- New div -->
-        
-        <label for="name" id="name-label">Name</label>
-        <span class="asterisk">*</span>
-        <input id="name" type="text" placeholder="John Doe" name="name" required />
+          <label for="amount">Loan Amount (USD) $</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            min="0.01"
+            max="500000.00"
+            step="0.01"
+            placeholder="0.00"
+            required />
 
-        <label for="email" id="email-label">Email</label>
-        <span class="asterisk">*</span>
-        <input id="email" type="email" placeholder="example@email.com" name="email" required />
-        
-        </div> <!-- div END -->
-        
-        <div class="form-group-BI"> <!-- New div -->
-        
-        <label for="business-name" id="business-name-label">Business Name:</label>
-        <span class="asterisk">*</span>
-        <input id="business-name" type="text" placeholder="Medical Company" name="business-name" required />
+          <label for="terms">Term</label>
+          <select id="terms">
+            <option disabled>-Select one-</option>
+            <option>12 months</option>
+            <option>24 months</option>
+            <option>36 months</option>
+            <option>48 months</option>
+            <option>60 months</option>
+          </select>
+        </div>
+        <!-- div END -->
 
-        <label for="phone"> Phone Number:</label>
-        <span class="asterisk">*</span>
-        <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
-        
-        <label for="business-address">Business Address</label>
-        <span class="asterisk">*</span>
-        <input type="text" id="business-address" name="business-address" required />
-       
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" />
+        <div class="form-group-NE">
+          <!-- New div -->
 
-        <label for="state-province">State / Province</label>
-        <input type="text" id="state-province" name="state-province" />
-        
-        <label for="postal-zipcode">Postal / Zip Code</label>
-        <input type="text" id="postal-zipcode" name="postal-zipcode" />
-        
-        </div> <!-- div END -->
-        
-        <div class="form-group-HI"> <!-- div NEW -->
-        
-        <label for="home-address">Home Address</label>
-        <span class="asterisk">*</span>
-        <input type="text" id="home-address" name="home-address" required />
-        
-        <label for="home-city">City</label>
-        <input type="text" id="home-city" name="home-city" />
+          <label for="name" id="name-label">Name</label>
+          <span class="asterisk">*</span>
+          <input id="name" type="text" placeholder="John Doe" name="name" required />
 
-        <label for="home-state-province">State / Province</label>
-        <input type="text" id="home-state-province" name="home-state-province" />
-       
-        <label for="home-postal-zipcode">Postal / Zip Code</label>
-        <input type="text" id="home-postal-zipcode" name="home-postal-zipcode" />
+          <label for="email" id="email-label">Email</label>
+          <span class="asterisk">*</span>
+          <input id="email" type="email" placeholder="example@email.com" name="email" required />
+        </div>
+        <!-- div END -->
 
-       </div> <!-- div END -->
-       
-       <div class="form-group-P"> <!-- div NEW -->
-       
-        <p>
-          You understand that by clicking on the I AGREE checkbox immediately following this notice, under the Fair
-          Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such information to conduct a
-          pre-qualification for credit. Furthermore, if it is determined that you pre-qualify for a loan product you are
-          also authorizing the release of business and/or personal credit information to Pacific Northwest X-Ray Inc.,
-          its affiliates, or assignees including, one or more alternate third-party funding providers, Pacific Northwest
-          X-Ray Inc. funding sources, and its and their third-party service providers for purpose of extending credit. I
-          understand that this does not obligate me in any way to purchase equipment. I certify that I am a business
-          owner that is personally liable for the business.
-        </p>
-        
-        </div> <!-- div END -->
-        
-        <div class="form-group-CB"> <!-- div NEW -->
+        <div class="form-group-BI">
+          <!-- New div -->
 
-        <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" required />
-        <label for="i-agree">I AGREE</label>
-        <span class="asterisk">*</span>
-        
-        <label for="date">Date</label>
-        <span class="asterisk">*</span>
-        <input type="date" id="date" name="date" required />
-        
-        </div> <!-- div END -->
-        
+          <label for="business-name" id="business-name-label">Business Name:</label>
+          <span class="asterisk">*</span>
+          <input id="business-name" type="text" placeholder="Medical Company" name="business-name" required />
+
+          <label for="phone"> Phone Number:</label>
+          <span class="asterisk">*</span>
+          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
+
+          <label for="business-address">Business Address</label>
+          <span class="asterisk">*</span>
+          <input type="text" id="business-address" name="business-address" required />
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" />
+
+          <label for="state-province">State / Province</label>
+          <input type="text" id="state-province" name="state-province" />
+
+          <label for="postal-zipcode">Postal / Zip Code</label>
+          <input type="text" id="postal-zipcode" name="postal-zipcode" />
+        </div>
+        <!-- div END -->
+
+        <div class="form-group-HI">
+          <!-- div NEW -->
+
+          <label for="home-address">Home Address</label>
+          <span class="asterisk">*</span>
+          <input type="text" id="home-address" name="home-address" required />
+
+          <label for="home-city">City</label>
+          <input type="text" id="home-city" name="home-city" />
+
+          <label for="home-state-province">State / Province</label>
+          <input type="text" id="home-state-province" name="home-state-province" />
+
+          <label for="home-postal-zipcode">Postal / Zip Code</label>
+          <input type="text" id="home-postal-zipcode" name="home-postal-zipcode" />
+        </div>
+        <!-- div END -->
+
+        <div class="form-group-P">
+          <!-- div NEW -->
+
+          <p>
+            You understand that by clicking on the I AGREE checkbox immediately following this notice, under the Fair
+            Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such information to conduct a
+            pre-qualification for credit. Furthermore, if it is determined that you pre-qualify for a loan product you
+            are also authorizing the release of business and/or personal credit information to Pacific Northwest X-Ray
+            Inc., its affiliates, or assignees including, one or more alternate third-party funding providers, Pacific
+            Northwest X-Ray Inc. funding sources, and its and their third-party service providers for purpose of
+            extending credit. I understand that this does not obligate me in any way to purchase equipment. I certify
+            that I am a business owner that is personally liable for the business.
+          </p>
+        </div>
+        <!-- div END -->
+
+        <div class="form-group-CB">
+          <!-- div NEW -->
+
+          <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" required />
+          <label for="i-agree">I AGREE</label>
+          <span class="asterisk">*</span>
+
+          <label for="date">Date</label>
+          <span class="asterisk">*</span>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <!-- div END -->
+
         <hr />
-        
-        <button type="submit">Submit</button> 
+
+        <button type="submit">Submit</button>
       </form>
     </main>
-        <!-- main END -->
+    <!-- main END -->
     <footer>
       <section class="footer">
         <div class="bottom_logos">

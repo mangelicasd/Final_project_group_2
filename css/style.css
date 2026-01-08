@@ -438,20 +438,17 @@ section.facts ul {
     text-align: center;
     font-size: var(--font-size-l);
     margin-bottom: 1rem;
-    font-family: var(--primary-font)
+    font-family: var(--primary-font);
 }
 
 #formMain {
     font-size: var(--font-size-m);
-    font-family: var(--secondary-font)
+    font-family: var(--secondary-font);
 }
 
 .asterisk {
     color: red;
 }
-
-
-
 
 /* END Financing Forms */
 
