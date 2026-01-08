@@ -70,6 +70,7 @@ section.nav {
 section.nav img {
     height: 125px;
     width: auto;
+    margin-left: 1rem;
     
 }
 section.nav a {
@@ -110,7 +111,7 @@ nav.top {
 }
 .navTogglerMenu i {
     color: #fff;
-    font-size: 2rem;          
+    font-size: 3rem;          
     cursor: pointer; 
 }
 
