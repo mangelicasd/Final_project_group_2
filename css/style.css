@@ -292,18 +292,15 @@ a.btn {
 }
 .footer p.sell { font-style: italic; font-size: 3rem; }
 
-section.footer h3 {
-        font-size: var(--font-size-m);
+section.footer h2 {
+    font-size: var(--font-size-m);
+    padding-bottom: 1rem;
     }
 
 section.footer article li, section.footer h3 {
     margin-bottom: 1rem;
 }
-section.footer h3 { 
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
 
-}
 .bottom_logos {
     width: 100%;
     display: flex;
