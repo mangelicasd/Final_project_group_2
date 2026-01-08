@@ -708,8 +708,9 @@ section.map_items ul ul ul li::before {
 
 
 
-    
-    @media (min-width: 970px) {
+    /* Combine @media (min-width: 970px) & @media (min-width: 120px)
+    /*@media (min-width: 970px) {*/
+    @media (min-width: 1110px) {
     :root { --nav-height: 152px; }  
     nav.top {
         position: static;
@@ -823,9 +824,9 @@ section.map_items ul ul ul li::before {
             justify-self: auto;
         }
     
-}
+/*}
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {*/
     header.about_us section.about_us_text  h1 {
         font: var(--fw-xb) var(--font-size-l)/1 var(--primary-font);
         padding-top: 2rem;    
