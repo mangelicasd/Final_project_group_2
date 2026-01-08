@@ -51,7 +51,11 @@
       <!--Carlos to add here-->
 
       <h1 id="finaceForm">Apply For Finacing</h1>
-      <form action="https://api.example.com/submit" method="post">
+      
+      <form action="https://api.example.com/submit" method="post" id="formMain">
+      
+       <div class="form-group-LA/T"> <!-- New div -->
+       
         <label for="amount">Loan Amount (USD) $</label>
         <input
           type="number"
@@ -72,8 +76,11 @@
           <option>48 months</option>
           <option>60 months</option>
         </select>
-        <br />
-        <br />
+        
+        </div> <!-- div END -->
+        
+        <div class="form-group-NE"> <!-- New div -->
+        
         <label for="name" id="name-label">Name</label>
         <span class="asterisk">*</span>
         <input id="name" type="text" placeholder="John Doe" name="name" required />
@@ -81,8 +88,11 @@
         <label for="email" id="email-label">Email</label>
         <span class="asterisk">*</span>
         <input id="email" type="email" placeholder="example@email.com" name="email" required />
-        <br />
-        <br />
+        
+        </div> <!-- div END -->
+        
+        <div class="form-group-BI"> <!-- New div -->
+        
         <label for="business-name" id="business-name-label">Business Name:</label>
         <span class="asterisk">*</span>
         <input id="business-name" type="text" placeholder="Medical Company" name="business-name" required />
@@ -90,45 +100,41 @@
         <label for="phone"> Phone Number:</label>
         <span class="asterisk">*</span>
         <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
-        <br />
-        <br />
+        
         <label for="business-address">Business Address</label>
         <span class="asterisk">*</span>
         <input type="text" id="business-address" name="business-address" required />
-        <br />
-        <br />
+       
         <label for="city">City</label>
         <input type="text" id="city" name="city" />
 
         <label for="state-province">State / Province</label>
         <input type="text" id="state-province" name="state-province" />
-        <br />
-        <br />
+        
         <label for="postal-zipcode">Postal / Zip Code</label>
         <input type="text" id="postal-zipcode" name="postal-zipcode" />
-        <br />
-        <br />
-        <br />
-        <br />
+        
+        </div> <!-- div END -->
+        
+        <div class="form-group-HI"> <!-- div NEW -->
+        
         <label for="home-address">Home Address</label>
         <span class="asterisk">*</span>
         <input type="text" id="home-address" name="home-address" required />
-        <br />
-        <br />
+        
         <label for="home-city">City</label>
         <input type="text" id="home-city" name="home-city" />
 
         <label for="home-state-province">State / Province</label>
         <input type="text" id="home-state-province" name="home-state-province" />
-        <br />
-        <br />
+       
         <label for="home-postal-zipcode">Postal / Zip Code</label>
         <input type="text" id="home-postal-zipcode" name="home-postal-zipcode" />
 
-        <br />
-        <br />
-        <br />
-
+       </div> <!-- div END -->
+       
+       <div class="form-group-P"> <!-- div NEW -->
+       
         <p>
           You understand that by clicking on the I AGREE checkbox immediately following this notice, under the Fair
           Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such information to conduct a
@@ -139,24 +145,27 @@
           understand that this does not obligate me in any way to purchase equipment. I certify that I am a business
           owner that is personally liable for the business.
         </p>
-        <br />
-        <br />
+        
+        </div> <!-- div END -->
+        
+        <div class="form-group-CB"> <!-- div NEW -->
 
         <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" required />
         <label for="i-agree">I AGREE</label>
         <span class="asterisk">*</span>
-        <br />
-        <br />
+        
         <label for="date">Date</label>
         <span class="asterisk">*</span>
         <input type="date" id="date" name="date" required />
-        <br />
-        <br />
+        
+        </div> <!-- div END -->
+        
         <hr />
-        <button type="submit">Submit</button>
+        
+        <button type="submit">Submit</button> 
       </form>
     </main>
-
+        <!-- main END -->
     <footer>
       <section class="footer">
         <div class="bottom_logos">

@@ -52,10 +52,6 @@ html {
     width: 100%;
 }
 
-body {
-    overflow: hidden;
-}
-
 section.nav {
     background-color: var(--primary-clr-dark);
     box-shadow: var(--shadow);
@@ -437,6 +433,19 @@ section.facts ul {
 }
 
 /* Financing forms (carlos) */
+
+#finaceForm {
+    text-align: center;
+    font-size: var(--font-size-l);
+    margin-bottom: 1rem;
+    font-family: var(--primary-font)
+}
+
+#formMain {
+    font-size: var(--font-size-m);
+    font-family: var(--secondary-font)
+}
+
 .asterisk {
     color: red;
 }
