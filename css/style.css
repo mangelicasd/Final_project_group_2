@@ -92,7 +92,7 @@ nav.top {
     display: block;
     text-decoration: none;
     text-align: center;
-    background: var(--primary-clr-light);
+    background: white;
     font-weight: var(--fw-b);
     padding: 1rem;
     border-radius: var(--border-radius);
@@ -826,16 +826,5 @@ section.map_items ul ul ul li::before {
             justify-self: auto;
         }
     
-/*}
-
-@media (min-width: 1200px) {*/
-    header.about_us section.about_us_text  h1 {
-        font: var(--fw-xb) var(--font-size-l)/1 var(--primary-font);
-        padding-top: 2rem;    
-    }
-    header.about_us section.about_us_text  p {
-        font: var(--fw-b) var(--font-size-m)/1.3 var(--secondary-font);
-        padding-bottom: 2rem;
-
-    }
 }
+
