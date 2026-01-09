@@ -1,3 +1,4 @@
+
 /* font families 
 font-family: "Open Sans", sans-serif;
 font-family: "Lato", sans-serif;
@@ -7,6 +8,33 @@ font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 100; */
 /*navigation - hidden*/
+
+
+
+
+/*  -------------------------------------------------------------------------------
+                               TABLE OF CONTENT
+    -------------------------------------------------------------------------------
+1. Variables for global styling
+2. Global styles
+3. Nav
+4. Header sections
+5. Main sections
+6. Buttons
+7. Footer
+8. About Us page
+9. Site map page
+10. Mobile size media query
+11. lrger-size media query
+
+
+
+
+
+/*  -------------------------------------------------------------------------------
+                              1. VARIABLES FOR GLOBAL STYLING
+    ------------------------------------------------------------------------------- */
+
 :root {
     /* typography */
     --primary-font: "Lato", Arial, Helvetica, sans-serif;
@@ -44,6 +72,9 @@ font-family: "Lato", sans-serif;
     --nav-height: 125px;
     --header-height: 125px;
 }
+/*  -------------------------------------------------------------------------------
+                                2. GLOBAL STYLES
+    ------------------------------------------------------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -52,6 +83,11 @@ html {
     font-size: 10px;
     width: 100%;
 }
+
+/*  -------------------------------------------------------------------------------
+                                3. NAV
+    ------------------------------------------------------------------------------- */
+
 section.nav {
     background-color: var(--primary-clr-dark);
     box-shadow: var(--shadow);
@@ -128,6 +164,11 @@ nav.top {
     display: none;
 }
 /*end of top navigation */
+
+/*  -------------------------------------------------------------------------------
+                              4. HEADER SECTIONS
+    ------------------------------------------------------------------------------- */
+
 .hero {
     background-image: url(../images/X-ray_hero-image-mobile.jpg);
     background-size: cover;
@@ -208,6 +249,10 @@ section.about_us_text img {
 }
 /*end of header*/
 
+/*  -------------------------------------------------------------------------------
+                              5. MAIN SECTIONS
+    ------------------------------------------------------------------------------- */
+
 /* main */
 
 .six-articles {
@@ -227,7 +272,7 @@ section.about_us_text img {
     max-width: 250px;
     height: auto;
     object-fit: cover;        /* crop nicely */
-    border-radius: var(--border-radius);       /* optional rounded corners */
+    border-radius: var(--border-radius);       /* rounded corners */
     display: block;           /* remove inline gaps */
     margin: 0 auto;
 }
@@ -252,6 +297,11 @@ section.about_us_text img {
     padding: 2rem;
     margin: 0;
 }
+
+/*  -------------------------------------------------------------------------------
+                              6. BUTTONS
+    ------------------------------------------------------------------------------- */
+
 .btn {
     font-size: var(--font-size-xs);
     color: var(--primary-clr);
@@ -276,7 +326,10 @@ a.btn {
     border-radius: var(--border-radius);
 }
 
-/* Footer */
+/*  -------------------------------------------------------------------------------
+                              7. FOOTER
+    ------------------------------------------------------------------------------- */
+
 .footer {
     font-size: var(--font-size-xs);
     width: 100%;
@@ -334,7 +387,9 @@ section.footer article li, section.footer h3 {
 }
 
 
-/*about Us */
+/*  -------------------------------------------------------------------------------
+                              8. ABOUT US PAGE
+    ------------------------------------------------------------------------------- */
 
 .three-articles {
     background-color: rgba(244, 180, 0, 0.37);
@@ -418,9 +473,9 @@ section.facts ul {
     list-style-position: inside;
 }
 
-/* ------------------------------------  Site map------------------------------------ */
-/* header map site */
-
+/*  -------------------------------------------------------------------------------
+                              9. SITE MAP PAGE
+    ------------------------------------------------------------------------------- */
 
 header.map h2 {
     padding: 1.5rem;
@@ -505,9 +560,8 @@ section.map_items a:link { color: var(--primary-clr-dark); }
 section.map_items a:visited { color: var(--primary-clr-dark); }
 section.map_items a:hover { color: red; }
 section.map_items a:active { color: green; }
+
 /* connector lines */
-
-
 section.map_items ul ul::before {
     content: '';
     position: absolute;
@@ -528,11 +582,13 @@ section.map_items ul ul ul li::before {
 }
 
 
-/* ---------------- target screens with min 676px, targets tablets ------------------ */
+/*  -------------------------------------------------------------------------------
+                              10. MOBILE SIZE MEDIA QUERIES
+    ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
     
-    :root {--nav-height: 242px; }
+  
     .navToggler, .navTogglerMenu, .menuOpen, .menuClosed {
         display: none;
     }
@@ -707,13 +763,14 @@ section.map_items ul ul ul li::before {
     footer a:active { color: green; }
 }
 
+/*  -------------------------------------------------------------------------------
+                              11. LARGER-SIZE MEDIA QUERY
+    ------------------------------------------------------------------------------- */
 
 
-
-    /* Combine @media (min-width: 970px) & @media (min-width: 120px)
-    /*@media (min-width: 970px) {*/
+   
     @media (min-width: 1110px) {
-    :root { --nav-height: 152px; }  
+     
     nav.top {
         position: static;
         display: flex;
