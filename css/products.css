@@ -1,0 +1,112 @@
+/* Styling for Products.html, equipment.html, supplies.html and parts.html */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.products a, a:link, a:visited, a:hover, a:focus, a:active {
+  color: inherit;         /* Prevents color changes between states */
+  font-family: inherit;   /* Ensures consistent font family */
+  font-size: inherit;     /* Ensures consistent font size */
+  text-decoration: none;  /* Optional: removes default underline */
+}
+
+.productsH2, .equipmentH2 {
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    /*background: var(--primary-clr-dark);*/
+    color: #000;
+    padding: 10px 2rem;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.equipmentMain h3 {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    font-weight: bold;
+}
+
+p {
+    color: #fff;
+    font: var(--fw-m) var(--font-size-xs) var(--secondary-font);
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+hr {
+    width: 15%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.productsHero {
+    background-image: url("../images/products/equipemntHero.jpg");
+    background-color: #cccccc;
+    padding: 10px auto;
+}
+
+.roundBtn {
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: rgba(120, 114, 114, 0.5); 
+    width: fit-content;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #b7b1b1;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+article p {
+    color: #000;
+    text-align: left;
+}
+
+.equipment section {
+    border-bottom: solid 2px #09857a;
+    padding: 0 10px;
+    margin: 20px 20px;
+}
+
+@media (min-width: 676px) {
+    .productsMain {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 2fr;
+        row-gap: 0;
+        column-gap: 10px;
+        justify-items: start;
+        align-items: start;
+        padding: 1em;
+    }
+    .productsMain img {
+        order: -1;
+        grid-row: span 2;
+        text-align: center;
+    }
+    
+    .equipmentMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        /*gap: 10px;*/
+    }
+    
+   
+}
+
+@media screen and (min-width: 1110px) {
+    .equipmentMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: stretch;
+        /*gap: 10px;*/
+    }
+    
+    
+}
