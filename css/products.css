@@ -45,7 +45,7 @@ hr {
 .productsHero {
     background-image: url("../images/products/equipemntHero.jpg");
     background-color: #cccccc;
-    padding: 10px auto;
+    padding: 10px;
 }
 
 .roundBtn {
