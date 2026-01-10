@@ -24,8 +24,10 @@ font-family: "Lato", sans-serif;
 7. Footer
 8. About Us page
 9. Site map page
-10. Mobile size media query
-11. lrger-size media query
+10. Financing page
+11. I agree terms and conditions page
+11. Mobile size media query
+12. larger-size media query
 
 
 
@@ -596,8 +598,10 @@ section.map_items ul ul ul li::before {
     background: #ccc;
 }
 
-/*------------------------FINANCING PAGE --------------------------------- */
-/* Financing forms (carlos) */
+/*  -------------------------------------------------------------------------------
+                              10. FINANCING PAGE
+    ------------------------------------------------------------------------------- */
+
 
 form {
     display: grid;
@@ -616,7 +620,7 @@ label:not(#i-agree-label) {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px #000000;
+    box-shadow: 0 4px 8px #000;
 }
 
 #financeFormHeading {
@@ -683,9 +687,51 @@ select {
     margin: 1rem 0 0 0;
     word-spacing: 1px;
 }
+.financing-form {
+    background-color: var(--primary-clr-light);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-m);
+    cursor: pointer;
+    border: 1px solid var(--primary-clr-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+}
+.asterisk {
+    color: red;
+}
+
+/*  -------------------------------------------------------------------------------
+                              11. I AGREE TERMS AND CONDITIONS
+    ------------------------------------------------------------------------------- */
+
+#tncHeader {
+    font-family: var(--primary-font);
+    font-size: var(--font-size-xl);
+    text-align: center;
+}
+
+#privacyPolicy {
+    font-family: var(--secondary-font);
+    font-size: 25px;
+}
+
+#underline {
+    color: red;
+    text-decoration: none;
+}
+
+.fake-link {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
-/* ---------------- target screens with min 676px, targets tablets ------------------ */
+/*  -------------------------------------------------------------------------------
+                              12. target screens with min 676px, targets tablets
+    ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
     :root {
