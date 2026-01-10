@@ -50,12 +50,20 @@
     <main>
       <!--Carlos to add here-->
 
-      <h1 id="finaceForm">Apply For Finacing</h1>
+      <h1 id="finaceFormHeading">Apply For Finacing</h1>
+
+      <p id="introP">
+        We understand that investing in imaging equipment is a significant decision. That’s why Pacific Northwest X-Ray
+        works closely with a select group of reputable, third-party financing partners we know and trust. Our team will
+        guide you through the financing process—answering questions, clarifying options, and advocating on your
+        behalf—so you can move forward with confidence and focus on what matters most: your patients, research, or
+        practice.
+      </p>
+
+      <p id="completeForm">Please complete the form below and submit. All fields are required.</p>
 
       <form action="https://api.example.com/submit" method="post" id="formMain">
-        <div class="form-group-LA/T">
-          <!-- New div -->
-
+        <div class="form-group">
           <label for="amount">Loan Amount (USD) $</label>
           <input
             type="number"
@@ -66,7 +74,9 @@
             step="0.01"
             placeholder="0.00"
             required />
+        </div>
 
+        <div class="form-group">
           <label for="terms">Term</label>
           <select id="terms">
             <option disabled>-Select one-</option>
@@ -77,97 +87,98 @@
             <option>60 months</option>
           </select>
         </div>
-        <!-- div END -->
 
-        <div class="form-group-NE">
-          <!-- New div -->
-
-          <label for="name" id="name-label">Name</label>
-          <span class="asterisk">*</span>
+        <div class="form-group">
+          <label for="name" id="name-label">Name<span class="asterisk">*</span></label>
+          
           <input id="name" type="text" placeholder="John Doe" name="name" required />
+        </div>
 
-          <label for="email" id="email-label">Email</label>
-          <span class="asterisk">*</span>
+        <div class="form-group">
+          <label for="email" id="email-label">Email<span class="asterisk">*</span></label>
+          
           <input id="email" type="email" placeholder="example@email.com" name="email" required />
         </div>
-        <!-- div END -->
 
-        <div class="form-group-BI">
-          <!-- New div -->
-
-          <label for="business-name" id="business-name-label">Business Name:</label>
-          <span class="asterisk">*</span>
+        <div class="form-group">
+          <label for="business-name" id="business-name-label">Business Name<span class="asterisk">*</span></label>
+          
           <input id="business-name" type="text" placeholder="Medical Company" name="business-name" required />
-
-          <label for="phone"> Phone Number:</label>
-          <span class="asterisk">*</span>
-          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
-
-          <label for="business-address">Business Address</label>
-          <span class="asterisk">*</span>
+        </div>
+        
+          <div class="form-group">
+          <label for="business-address">Business Address<span class="asterisk">*</span></label>
+          
           <input type="text" id="business-address" name="business-address" required />
+        </div>
 
+        <div class="form-group">
+          <label for="phone">Business Phone Number<span class="asterisk">*</span></label>
+          
+          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
+        </div>
+
+      
+
+        <div class="form-group">
           <label for="city">City</label>
           <input type="text" id="city" name="city" />
+        </div>
 
+        <div class="form-group">
           <label for="state-province">State / Province</label>
           <input type="text" id="state-province" name="state-province" />
+        </div>
 
+        <div class="form-group">
           <label for="postal-zipcode">Postal / Zip Code</label>
           <input type="text" id="postal-zipcode" name="postal-zipcode" />
         </div>
-        <!-- div END -->
 
-        <div class="form-group-HI">
-          <!-- div NEW -->
-
-          <label for="home-address">Home Address</label>
-          <span class="asterisk">*</span>
+        <div class="form-group">
+          <label for="home-address">Home Address<span class="asterisk">*</span></label>
+          
           <input type="text" id="home-address" name="home-address" required />
+        </div>
 
+        <div class="form-group">
           <label for="home-city">City</label>
           <input type="text" id="home-city" name="home-city" />
+        </div>
 
+        <div class="form-group">
           <label for="home-state-province">State / Province</label>
           <input type="text" id="home-state-province" name="home-state-province" />
+        </div>
 
+        <div class="form-group">
           <label for="home-postal-zipcode">Postal / Zip Code</label>
           <input type="text" id="home-postal-zipcode" name="home-postal-zipcode" />
         </div>
-        <!-- div END -->
 
-        <div class="form-group-P">
-          <!-- div NEW -->
-
-          <p>
-            You understand that by clicking on the I AGREE checkbox immediately following this notice, under the Fair
-            Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such information to conduct a
-            pre-qualification for credit. Furthermore, if it is determined that you pre-qualify for a loan product you
-            are also authorizing the release of business and/or personal credit information to Pacific Northwest X-Ray
-            Inc., its affiliates, or assignees including, one or more alternate third-party funding providers, Pacific
-            Northwest X-Ray Inc. funding sources, and its and their third-party service providers for purpose of
-            extending credit. I understand that this does not obligate me in any way to purchase equipment. I certify
-            that I am a business owner that is personally liable for the business.
-          </p>
-        </div>
-        <!-- div END -->
-
-        <div class="form-group-CB">
-          <!-- div NEW -->
-
-          <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" required />
-          <label for="i-agree">I AGREE</label>
-          <span class="asterisk">*</span>
-
-          <label for="date">Date</label>
-          <span class="asterisk">*</span>
+        <div class="form-group">
+          <label for="date">Date<span class="asterisk">*</span></label>
+          
           <input type="date" id="date" name="date" required />
         </div>
-        <!-- div END -->
+        
+        <div class="form-group">
+          <label for="phone">Phone Number<span class="asterisk">*</span></label>
+          
+          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required />
+        </div>
 
-        <hr />
+        <div class="form-group-CB">
+          <input type="checkbox" id="i-agree" value="i-agree" name="i-agree" required />
+          <span class="asterisk">*</span>
 
-        <button type="submit">Submit</button>
+          <label for="i-agree"
+            ><a href="../pages/FinancingTermsandCondition.html" target="_blank">I Agree</a> to the secure sharing of my
+            information with trusted financing partners for financing evaluation purposes only.</label
+          >
+        </div>
+
+        <button type="submit">Apply</button>
       </form>
     </main>
     <!-- main END -->
