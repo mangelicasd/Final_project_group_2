@@ -434,7 +434,27 @@ section.facts ul {
 
 /* Financing forms (carlos) */
 
-#finaceFormHeading {
+form {
+    display: grid;
+    gap: 2rem;
+
+    @media (width > 676px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+label:not(#i-agree-label) {
+    margin-bottom: 1rem;
+}
+
+.floating-element {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #000000;
+}
+
+#financeFormHeading {
     text-align: center;
     font-size: var(--font-size-l);
     margin-bottom: 1rem;
@@ -444,15 +464,14 @@ section.facts ul {
 #introP {
     font-family: var(--secondary-font);
     font-size: var(--font-size-s);
-    margin: 1rem 0;
-    text-align: justify;
+    margin: 1rem 2rem 0;
     line-height: normal;
 }
 
 #completeForm {
     font-family: var(--secondary-font);
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 #formMain {
@@ -464,29 +483,76 @@ input {
     border: 2px solid #000;
     border-radius: 5px;
     padding: 0.5ex 1ex;
+    accent-color: var(--primary-clr-light);
 }
 
-form {
-    display: grid;
-    gap: 1rem;
+input:not([type="checkbox"]) {
+    width: 100%;
+}
 
-    @media (width > 676px) {
-        grid-template-columns: 1fr 1fr;
-    }
+input #i-agree {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+    border: 2px solid;
 }
 
 .form-group {
     display: grid;
 }
 
+.form-group-CB:has(#i-agree) {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 1ch;
+}
+
 .form-group-CB {
     font-size: var(--font-size-xs);
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
+    word-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #ff0000;
 }
 
 button {
     font-family: var(--secondary-font);
-    padding: 1rem 2rem;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    background-color: var(--primary-clr-light);
+    color: #fff;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #0f91cc;
+    cursor: pointer;
+}
+
+.financing-form {
+    @media (width > 676px) {
+        justify-self: start;
+    }
+}
+
+#underline {
+    text-decoration: none;
 }
 
 .asterisk {
