@@ -1,5 +1,5 @@
-/* Styling for Products.html, equipment.html, supplies.html and parts.html */
-img {
+/* Styling for Products.html & equipment.html */
+.products img, .equipment img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -7,10 +7,10 @@ img {
 }
 
 .products a, a:link, a:visited, a:hover, a:focus, a:active {
-  color: inherit;         /* Prevents color changes between states */
+  color: inherit;         /* Prevents color changes*/
   font-family: inherit;   /* Ensures consistent font family */
   font-size: inherit;     /* Ensures consistent font size */
-  text-decoration: none;  /* Optional: removes default underline */
+  text-decoration: none;  /* Removes default underline */
 }
 
 .productsH2, .equipmentH2 {
@@ -28,14 +28,14 @@ img {
     font-weight: bold;
 }
 
-p {
+.products p {
     color: #fff;
     font: var(--fw-m) var(--font-size-xs) var(--secondary-font);
     text-align: center;
     padding: 1rem 1rem;
 }
 
-hr {
+.equipment hr {
     width: 15%;
     border: 2px solid #000;
     border-radius: 5px;
@@ -62,9 +62,11 @@ hr {
     text-align: center;
 }
 
-article p {
+.products article p, .equipment p {
+    font: var(--fw-m) var(--font-size-xs) var(--secondary-font);
     color: #000;
     text-align: left;
+    padding: 1rem 1rem;
 }
 
 .equipment section {
