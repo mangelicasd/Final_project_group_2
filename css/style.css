@@ -596,6 +596,95 @@ section.map_items ul ul ul li::before {
     background: #ccc;
 }
 
+/*------------------------FINANCING PAGE --------------------------------- */
+/* Financing forms (carlos) */
+
+form {
+    display: grid;
+    gap: 2rem;
+
+    @media (width > 676px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+label:not(#i-agree-label) {
+    margin-bottom: 1rem;
+}
+
+.floating-element {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #000000;
+}
+
+#financeFormHeading {
+    text-align: center;
+    font-size: var(--font-size-l);
+    margin-bottom: 1rem;
+    font-family: var(--primary-font);
+}
+
+#introP {
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-s);
+    margin: 1rem 2rem 0;
+    line-height: normal;
+}
+
+#completeForm {
+    font-family: var(--secondary-font);
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+#formMain {
+    font-size: var(--font-size-m);
+    font-family: var(--secondary-font);
+}
+
+input {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 0.5ex 1ex;
+    accent-color: var(--primary-clr-light);
+}
+
+input:not([type="checkbox"]) {
+    width: 100%;
+}
+
+input #i-agree {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.form-group {
+    display: grid;
+}
+
+.form-group-CB:has(#i-agree) {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 1ch;
+}
+
+.form-group-CB {
+    font-size: var(--font-size-xs);
+    margin: 1rem 0 0 0;
+    word-spacing: 1px;
+}
+
+
 /* ---------------- target screens with min 676px, targets tablets ------------------ */
 
 @media (min-width: 676px) {
