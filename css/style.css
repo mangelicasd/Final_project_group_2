@@ -1,4 +1,3 @@
-
 /* font families 
 font-family: "Open Sans", sans-serif;
 font-family: "Lato", sans-serif;
@@ -8,9 +7,6 @@ font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 100; */
 /*navigation - hidden*/
-
-
-
 
 /*  -------------------------------------------------------------------------------
                                TABLE OF CONTENT
@@ -201,7 +197,6 @@ header.hero {
     margin: 0;
 }
 
-
 section.about_us_text {
     background-color: var(--primary-clr-light);
     padding: 2rem;
@@ -292,7 +287,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
 .six-articles p {
     font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
@@ -488,7 +482,7 @@ section.facts ul {
 
 header.map h2 {
     padding: 1.5rem;
-    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     color: var(--primary-clr-dark);
     background: var(--neutral-lt-color);
     display: flex;
@@ -598,8 +592,9 @@ section.map_items ul ul ul li::before {
 
 /*------------------------FINANCING PAGE --------------------------------- */
 /* Financing forms (carlos) */
-
-form {
+#formMain {
+    font-size: var(--font-size-m);
+    font-family: var(--secondary-font);
     display: grid;
     gap: 2rem;
 
@@ -608,15 +603,12 @@ form {
     }
 }
 
-label:not(#i-agree-label) {
-    margin-bottom: 1rem;
-}
-
 .floating-element {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 4px 8px #000000;
+    width: 100%;
 }
 
 #financeFormHeading {
@@ -637,11 +629,6 @@ label:not(#i-agree-label) {
     font-family: var(--secondary-font);
     text-align: center;
     margin: 1rem 0 2rem 0;
-}
-
-#formMain {
-    font-size: var(--font-size-m);
-    font-family: var(--secondary-font);
 }
 
 input {
@@ -684,6 +671,59 @@ select {
     word-spacing: 1px;
 }
 
+.asterisk {
+    color: red;
+}
+
+/*------------------------FINANCING Terms and Conditions PAGE --------------------------------- */
+
+#tncHeader {
+    font-family: var(--primary-font);
+    font-size: var(--font-size-xl);
+    text-align: center;
+}
+
+#privacyPolicy {
+    font-family: var(--secondary-font);
+    font-size: 25px;
+}
+
+#underline {
+    color: red;
+    text-decoration: none;
+}
+
+/* End */
+
+/*--------------------------------- My Account ---------------------------------------*/
+#main-my-account {
+    padding: 200px 70px;
+}
+
+.floating-element-my-account {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #000000;
+    width: 200px;
+    min-width: 100px;
+    margin: 0 auto;
+
+    @media (width > 676px) {
+        width: 350px;
+    }
+
+    @media (width > 970px) {
+        width: 400px;
+    }
+}
+
+.login-box {
+    position: relative;
+    width: auto;
+}
+
+/*------------------------End--------------------------------------- */
 
 /* ---------------- target screens with min 676px, targets tablets ------------------ */
 
