@@ -1,3 +1,4 @@
+
 /* font families 
 font-family: "Open Sans", sans-serif;
 font-family: "Lato", sans-serif;
@@ -7,6 +8,33 @@ font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 100; */
 /*navigation - hidden*/
+
+
+
+
+/*  -------------------------------------------------------------------------------
+                               TABLE OF CONTENT
+    -------------------------------------------------------------------------------
+1. Variables for global styling
+2. Global styles
+3. Nav
+4. Header sections
+5. Main sections
+6. Buttons
+7. Footer
+8. About Us page
+9. Site map page
+10. Mobile size media query
+11. lrger-size media query
+
+
+
+
+
+/*  -------------------------------------------------------------------------------
+                              1. VARIABLES FOR GLOBAL STYLING
+    ------------------------------------------------------------------------------- */
+
 :root {
     /* typography */
     --primary-font: "Lato", Arial, Helvetica, sans-serif;
@@ -42,7 +70,11 @@ font-family: "Lato", sans-serif;
 
     /* Nav height */
     --nav-height: 125px;
+    --header-height: 125px;
 }
+/*  -------------------------------------------------------------------------------
+                                2. GLOBAL STYLES
+    ------------------------------------------------------------------------------- */
 
 * {
     box-sizing: border-box;
@@ -88,7 +120,7 @@ nav.top {
     display: block;
     text-decoration: none;
     text-align: center;
-    background: var(--primary-clr-light);
+    background: white;
     font-weight: var(--fw-b);
     padding: 1rem;
     border-radius: var(--border-radius);
@@ -132,6 +164,11 @@ nav.top {
     display: none;
 }
 /*end of top navigation */
+
+/*  -------------------------------------------------------------------------------
+                              4. HEADER SECTIONS
+    ------------------------------------------------------------------------------- */
+
 .hero {
     background-image: url(../images/X-ray_hero-image-mobile.jpg);
     background-size: cover;
@@ -163,9 +200,7 @@ header.hero {
     font: var(--fw-s) var(--font-size-xs) / 1.5 var(--secondary-font);
     margin: 0;
 }
-header.about_us {
-    padding-top: 125px;
-}
+
 
 section.about_us_text {
     background-color: var(--primary-clr-light);
@@ -213,7 +248,9 @@ section.about_us_text img {
 }
 /*end of header*/
 
-/* main */
+/*  -------------------------------------------------------------------------------
+                              5. MAIN SECTIONS
+    ------------------------------------------------------------------------------- */
 
 main {
     margin-top: var(--nav-height) auto 0;
@@ -222,7 +259,7 @@ main {
 }
 
 .six-articles {
-    min-height: celc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
@@ -247,10 +284,15 @@ main {
     font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     background: var(--primary-clr-dark);
     color: var(--neutral-lt-color);
-    padding: 2rem;
+    padding: 0 2rem;
     margin: 0 0 1rem 0;
     border-radius: var(--border-radius);
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    
 }
 .six-articles p {
     font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
@@ -258,6 +300,11 @@ main {
     padding: 2rem;
     margin: 0;
 }
+
+/*  -------------------------------------------------------------------------------
+                              6. BUTTONS
+    ------------------------------------------------------------------------------- */
+
 .btn {
     font-size: var(--font-size-xs);
     color: var(--primary-clr);
@@ -280,7 +327,10 @@ a.btn {
     border-radius: var(--border-radius);
 }
 
-/* Footer */
+/*  -------------------------------------------------------------------------------
+                              7. FOOTER
+    ------------------------------------------------------------------------------- */
+
 .footer {
     font-size: var(--font-size-xs);
     width: 100%;
@@ -432,160 +482,13 @@ section.facts ul {
     list-style-position: inside;
 }
 
-/* Financing forms (carlos) */
-
-form {
-    display: grid;
-    gap: 2rem;
-
-    @media (width > 676px) {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-label:not(#i-agree-label) {
-    margin-bottom: 1rem;
-}
-
-.floating-element {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px #000000;
-}
-
-#financeFormHeading {
-    text-align: center;
-    font-size: var(--font-size-l);
-    margin-bottom: 1rem;
-    font-family: var(--primary-font);
-}
-
-#introP {
-    font-family: var(--secondary-font);
-    font-size: var(--font-size-s);
-    margin: 1rem 2rem 0;
-    line-height: normal;
-}
-
-#completeForm {
-    font-family: var(--secondary-font);
-    text-align: center;
-    margin: 1rem 0 2rem 0;
-}
-
-#formMain {
-    font-size: var(--font-size-m);
-    font-family: var(--secondary-font);
-}
-
-input {
-    border: 2px solid #000;
-    border-radius: 5px;
-    padding: 0.5ex 1ex;
-    accent-color: var(--primary-clr-light);
-}
-
-input:not([type="checkbox"]) {
-    width: 100%;
-}
-
-input #i-agree {
-    cursor: pointer;
-}
-
-input[type="checkbox"]:hover {
-    cursor: pointer;
-}
-
-select {
-    cursor: pointer;
-    border: 2px solid;
-}
-
-.form-group {
-    display: grid;
-}
-
-.form-group-CB:has(#i-agree) {
-    grid-column: 1 / -1;
-    display: flex;
-    gap: 1ch;
-}
-
-.form-group-CB {
-    font-size: var(--font-size-xs);
-    margin: 1rem 0 0 0;
-    word-spacing: 1px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    color: #551a8b;
-}
-
-a:hover {
-    color: #ff0000;
-}
-
-button {
-    font-family: var(--secondary-font);
-    padding: 1rem;
-    margin-bottom: 1.2rem;
-    background-color: var(--primary-clr-light);
-    color: #fff;
-    border-radius: 10px;
-}
-
-button:hover {
-    background-color: #0f91cc;
-    cursor: pointer;
-}
-
-.financing-form {
-    @media (width > 676px) {
-        justify-self: start;
-    }
-}
-
-#underline {
-    text-decoration: none;
-}
-
-.asterisk {
-    color: red;
-}
-
-/* END Financing Forms */
-
-/* Start Financing Terms & Conditions */
-
-#tncHeader {
-    font-family: var(--primary-font);
-    font-size: var(--font-size-xl);
-    text-align: center;
-}
-
-#privacyPolicy {
-    font-family: var(--secondary-font);
-    font-size: 2.6rem;
-    margin: 1rem 0;
-}
-
-#underline {
-    color: red;
-}
-/* Financing Terms & Conditions */
-
-/* ------------------------------------  Site map------------------------------------ */
-/* header map site */
+/*  -------------------------------------------------------------------------------
+                              9. SITE MAP PAGE
+    ------------------------------------------------------------------------------- */
 
 header.map h2 {
-    padding: 200px 1.5rem 1.5rem;
-    font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
+    padding: 1.5rem;
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
     color: var(--primary-clr-dark);
     background: var(--neutral-lt-color);
     display: flex;
