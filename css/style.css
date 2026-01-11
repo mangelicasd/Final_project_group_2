@@ -26,8 +26,9 @@ font-family: "Lato", sans-serif;
 9. Site map page
 10. Financing page
 11. I agree terms and conditions page
-11. Mobile size media query
-12. larger-size media query
+12. Client guarantee
+13. Mobile size media query
+14. larger-size media query
 
 
 
@@ -307,7 +308,7 @@ main {
                               6. BUTTONS
     ------------------------------------------------------------------------------- */
 
-.btn {
+.btn, a.cta-button {
     font-size: var(--font-size-xs);
     color: var(--primary-clr);
     text-decoration: none;
@@ -315,7 +316,7 @@ main {
     display: block;
     margin: 1rem auto;
 }
-a.btn {
+a.btn, a.cta-button {
     font-size: 1.5rem;
     color: var(--primary-clr);
     font-weight: var(--fw-b);
@@ -728,15 +729,78 @@ select {
     text-decoration: underline;
 }
 
+/*  -------------------------------------------------------------------------------
+                              12. CLIENT GUARANTEE
+    ------------------------------------------------------------------------------- */
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #0A2E4E;
+    margin: 3rem 0;
+}
+section.client-guarantee h1 { 
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    background: var(--primary-clr-dark);
+    color: var(--neutral-lt-color);
+    padding: 3rem 0 2rem;
+    margin: 0 0 1rem 0;
+    border-radius: var(--border-radius);
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.client-guarantee p {
+    font: var(--fw-m) var(--font-size-m)/1.5 var(--secondary-font);
+    color: var(--primary-clr-dark);
+    padding: 2rem;
+    margin: 0;
+}
+
+.client-guarantee ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 2rem auto;
+}
+.client-guarantee ul li {
+    font: var(--fw-m) var(--font-size-m)/1.2 var(--secondary-font);  
+    background-color: rgba(244, 180, 0, 0.40);  
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+ 
+}
+.client-guarantee ul li strong {
+    font: var(--fw-m) var(--font-size-l)/1.2 var(--primary-font);
+}
+
+.contact-heading h2 {
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    padding-left: 2rem;
+}
+section.contact-heading {
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+section.contact-heading p {
+    padding: 1rem;
+    font: var(--fw-s) var(--font-size-m)/1.2 var(--secondary-font);  
+}
+
+a.cta-button:hover,
+a.cta-button:focus-visible {
+  background-color: #0EA5E9;
+}
+
 
 /*  -------------------------------------------------------------------------------
-                              12. target screens with min 676px, targets tablets
+                              13. target screens with min 676px, targets tablets
     ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
-    :root {
-        --nav-height: 242px;
-    }
+    :root { --nav-height: 242px; }
     .navToggler,
     .navTogglerMenu,
     .menuOpen,
