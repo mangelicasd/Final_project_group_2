@@ -18,10 +18,14 @@ font-family: "Lato", sans-serif;
 5. Main sections
 6. Buttons
 7. Footer
-8. About Us page
-9. Site map page
-10. Mobile size media query
-11. lrger-size media query
+8. Java back-to-top arrow
+9. About Us page
+10. Site map page
+11. Financing page
+12. I agree terms and conditions page
+13. Client guarantee
+14. Medium-size media query
+15. larger-size media query
 
 
 
@@ -63,11 +67,8 @@ font-family: "Lato", sans-serif;
     --border-radius: 10px;
     --shadow: 5px 5px 8px #f4b400;
     --margin-left: 2rem;
-
-    /* Nav height */
-    --nav-height: 125px;
-    --header-height: 125px;
 }
+
 /*  -------------------------------------------------------------------------------
                                 2. GLOBAL STYLES
     ------------------------------------------------------------------------------- */
@@ -75,10 +76,16 @@ font-family: "Lato", sans-serif;
 * {
     box-sizing: border-box;
 }
+
 html {
     font-size: 10px;
     width: 100%;
 }
+
+/*  -------------------------------------------------------------------------------
+                                3. NAV
+    ------------------------------------------------------------------------------- */
+
 
 section.nav {
     background-color: var(--primary-clr-dark);
@@ -86,7 +93,6 @@ section.nav {
     font-family: var(--secondary-font);
     font-size: var(--font-size-xs);
     font-weight: var(--fw-xs);
-    color: var(--primary-clr-dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,24 +100,30 @@ section.nav {
     z-index: 100;
     width: 100%;
 }
+
 section.nav img {
     height: 125px;
     width: auto;
+    margin-left: 3rem;
 }
+
 section.nav a {
     display: flex;
     align-items: center;
     margin: 0.5rem 1rem;
 }
+
 nav.top {
     position: absolute;
     top: 100%;
     width: 100%;
     display: none;
 }
+
 .topnav li {
     padding: 0.2rem;
 }
+
 .topnav li a {
     display: block;
     text-decoration: none;
@@ -121,12 +133,15 @@ nav.top {
     padding: 1rem;
     border-radius: var(--border-radius);
 }
+
 .navToggler:checked ~ nav.top {
     display: block;
 }
+
 .navToggler {
     display: none;
 }
+
 .navTogglerMenu {
     display: flex;
     justify-content: flex-start;
@@ -134,6 +149,7 @@ nav.top {
     order: 1;
     padding-right: 4rem;
 }
+
 .navTogglerMenu i {
     color: #fff;
     font-size: 2rem;
@@ -143,15 +159,19 @@ nav.top {
 .menuClose {
     display: none;
 }
+
 .topnav li a:link {
     color: var(--primary-clr-dark);
 }
+
 .topnav li a:visited {
     color: var(--primary-clr-dark);
 }
+
 .topnav li a:hover {
     color: red;
 }
+
 .topnav li a:active {
     color: green;
 }
@@ -159,7 +179,6 @@ nav.top {
 .nav-logo-right {
     display: none;
 }
-/*end of top navigation */
 
 /*  -------------------------------------------------------------------------------
                               4. HEADER SECTIONS
@@ -178,9 +197,11 @@ nav.top {
     justify-content: flex-start;
     padding: 2rem;
 }
+
 header.hero {
     padding-top: 255px;
 }
+
 .hero-text {
     background: var(--neutral-mid-color);
     padding: 2rem;
@@ -188,10 +209,12 @@ header.hero {
     color: var(--neutral-lt-color);
     border-radius: var(--border-radius);
 }
+
 .hero-text h1 {
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     margin: 0 0 1rem 0;
 }
+
 .hero-text p {
     font: var(--fw-s) var(--font-size-xs) / 1.5 var(--secondary-font);
     margin: 0;
@@ -202,20 +225,24 @@ section.about_us_text {
     padding: 2rem;
     border-bottom: solid 50px var(--accent-clr);
 }
+
 header.about_us section.about_us_text h1 {
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     color: #fff;
     margin: 0 0 1rem 0;
 }
+
 header.about_us section.about_us_text p {
     font: var(--fw-s) var(--font-size-xs) / 1.5 var(--secondary-font);
     color: #fff;
     margin: 0;
 }
+
 header.about_us section.about_us_text img {
     border-radius: var(--border-radius);
     max-width: 100%;
 }
+
 section.about_us_text {
     display: flex;
     flex-direction: column;
@@ -223,38 +250,42 @@ section.about_us_text {
     text-align: center;
     gap: 1.5rem;
 }
+
 section.about_us_text p {
     text-align: left;
 }
+
 section.about_us_text p:last-child {
     padding-top: 1rem;
 }
+
 section.about_us_text figure {
     width: 100%;
     margin: 0;
 }
+
 section.about_us_text img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .about_us_text article {
     max-width: 600px;
 }
-/*end of header*/
 
 /*  -------------------------------------------------------------------------------
                               5. MAIN SECTIONS
     ------------------------------------------------------------------------------- */
 
 main {
-    margin-top: var(--nav-height) auto 0;
     padding: 2rem;
     max-width: 1400px;
+    margin: 2rem auto;
+    box-sizing: border-box;
 }
 
-.six-articles {
-    min-height: calc(100vh - var(--header-height));
+.six-articles, .three-articles {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
@@ -264,18 +295,20 @@ main {
     background-color: #fff;
     box-sizing: border-box;
 }
+
 .six-articles img {
-    width: 100%; /* responsive width */
-    aspect-ratio: 1 / 1; /* force square shape */
+    width: 100%;
+    aspect-ratio: 1 / 1;
     max-width: 250px;
     height: auto;
-    object-fit: cover; /* crop nicely */
-    border-radius: var(--border-radius); /* optional rounded corners */
-    display: block; /* remove inline gaps */
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    display: block;
     margin: 0 auto;
 }
 
-.six-articles h2 {
+.six-articles h2,
+.pnx_promise h2 {
     font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     background: var(--primary-clr-dark);
     color: var(--neutral-lt-color);
@@ -287,8 +320,11 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+
 }
-.six-articles p {
+
+.six-articles p,
+.pnx_promise p {
     font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
     color: var(--primary-clr-dark);
     padding: 2rem;
@@ -299,7 +335,8 @@ main {
                               6. BUTTONS
     ------------------------------------------------------------------------------- */
 
-.btn {
+.btn,
+a.cta-button {
     font-size: var(--font-size-xs);
     color: var(--primary-clr);
     text-decoration: none;
@@ -307,7 +344,9 @@ main {
     display: block;
     margin: 1rem auto;
 }
-a.btn {
+
+a.btn,
+a.cta-button {
     font-size: 1.5rem;
     color: var(--primary-clr);
     font-weight: var(--fw-b);
@@ -319,6 +358,24 @@ a.btn {
     text-align: center;
     border: 1px solid var(--primary-clr-dark);
     border-radius: var(--border-radius);
+}
+
+.pnx_promise {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.pnx-intro figure {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+.pnx-intro figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /*  -------------------------------------------------------------------------------
@@ -338,8 +395,8 @@ a.btn {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    /* margin-top: 125px; use this to show the footer in the pages without main*/
 }
+
 .footer p.sell {
     font-style: italic;
     font-size: 3rem;
@@ -353,29 +410,36 @@ section.footer article li,
 section.footer h3 {
     margin-bottom: 1rem;
 }
+
 section.footer h3 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
 }
+
 .bottom_logos {
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
+
 .bottom_logos img {
     height: 125px;
     width: auto;
 }
+
 .bottom_logos img:first-child {
     margin-left: 2rem;
 }
+
 .bottom_logos img:last-child {
     margin-right: 2rem;
 }
+
 .footer_articles {
     display: none;
 }
+
 .sitemap_btn {
     background-color: var(--accent-clr);
     color: var(--primary-clr-dark);
@@ -386,20 +450,52 @@ section.footer h3 {
     display: inline-block;
     margin: 1rem auto;
 }
+
 .footer p {
     text-align: center;
     padding: 2rem;
 }
 
-/*about Us */
+/*  -------------------------------------------------------------------------------
+                              8. JAVA BACK-TO-TOP ARROW
+    ------------------------------------------------------------------------------- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-clr-dark);
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+.back-to-top.visible {
+  display: flex;
+}
+
+.back-to-top i {
+    font-size: 4rem;
+    color: white;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-clr);
+    transform: translateY(-4px);
+}
+
+/*  -------------------------------------------------------------------------------
+                              9. ABOUT US PAGE
+    ------------------------------------------------------------------------------- */
+
 
 .three-articles {
     background-color: rgba(244, 180, 0, 0.37);
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    box-sizing: border-box;
 }
+
 article.elena,
 article.john,
 article.jordan {
@@ -408,6 +504,7 @@ article.jordan {
     padding: 2rem;
     border-radius: var(--border-radius);
 }
+
 .three-articles h1 {
     color: #fff;
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
@@ -416,6 +513,7 @@ article.jordan {
     border-bottom: solid 20px var(--accent-clr);
     border-radius: var(--border-radius);
 }
+
 .three-articles article figure {
     display: flex;
     flex-direction: column;
@@ -424,6 +522,7 @@ article.jordan {
     max-width: 300px;
     margin: 0 auto;
 }
+
 .three-articles img {
     width: 300px;
     height: 300px;
@@ -432,12 +531,14 @@ article.jordan {
     border-radius: 50%;
     display: block;
 }
+
 .three-articles figcaption h2 {
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     color: var(--accent-clr);
     margin: 0.5rem;
     padding: 1rem 0;
 }
+
 .three-articles figcaption h3 {
     color: #fff;
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
@@ -455,6 +556,7 @@ article.jordan {
     border-radius: var(--border-radius);
     border: solid 5px var(--accent-clr);
 }
+
 .three-articles figcaption p:last-of-type {
     font: var(--fw-b) var(--font-size-l) / 1.5 var(--secondary-font);
     font-size: var(--font-size-m);
@@ -463,26 +565,40 @@ article.jordan {
     margin-top: 0.5rem;
     padding: 2rem;
 }
+
 section.facts {
     background-color: var(--neutral-lt-color);
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem; 
+    box-sizing: border-box;
+
 }
-section.facts h1 {
-    border-bottom: none;
+
+section.facts h2 {
+    color: #fff;
+    font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
+    background-color: var(--primary-clr-dark);
+    padding: 2rem 1rem;
+    border-bottom: solid 20px var(--accent-clr);
+    border-radius: var(--border-radius);
 }
+
 section.facts ul {
-    font: var(--fw-b) var(--font-size-m) / 1.5 var(--secondary-font);
+    font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
     padding: 2rem;
     list-style-type: square;
     list-style-position: inside;
 }
 
 /*  -------------------------------------------------------------------------------
-                              9. SITE MAP PAGE
+                              10 . SITE MAP PAGE
     ------------------------------------------------------------------------------- */
 
 header.map h2 {
     padding: 1.5rem;
-    font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-m)/1.2 var(--primary-font);
     color: var(--primary-clr-dark);
     background: var(--neutral-lt-color);
     display: flex;
@@ -490,15 +606,16 @@ header.map h2 {
     box-shadow: var(--shadow);
 }
 
-/* sitemap section styling */
 .map_main {
     padding: 4rem 2rem;
 }
+
 section.map_items {
     text-align: center;
     margin: 2rem auto;
     max-width: 1200px;
 }
+
 section.map_items h2 {
     font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     background: var(--primary-clr-dark);
@@ -519,6 +636,7 @@ section.map_items ul {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 section.map_items li {
     position: relative;
     padding: 0 0.5rem 1rem;
@@ -527,7 +645,7 @@ section.map_items li {
     min-width: 120px;
     margin: 1rem 0;
 }
-/* Nested lists */
+
 section.map_items ul ul {
     margin-top: 2rem;
     display: flex;
@@ -535,6 +653,7 @@ section.map_items ul ul {
     position: relative;
     gap: 1rem;
 }
+
 section.map_items ul ul ul {
     margin-top: 2rem;
     display: flex;
@@ -552,34 +671,32 @@ section.map_items ul ul ul li {
     text-decoration: none;
     padding: 1rem;
 }
+
 section.map_items a {
     text-decoration: none;
     color: var(--primary-clr-dark);
 }
 
-section.map_items a:link {
-    color: var(--primary-clr-dark);
-}
-section.map_items a:visited {
-    color: var(--primary-clr-dark);
-}
-section.map_items a:hover {
-    color: red;
-}
-section.map_items a:active {
-    color: green;
-}
+section.map_items a:link { color: var(--primary-clr-dark); }
+
+section.map_items a:visited { color: var(--primary-clr-dark); }
+
+section.map_items a:hover { color: red; }
+
+section.map_items a:active { color: green; }
+
 /* connector lines */
 
 section.map_items ul ul::before {
     content: "";
     position: absolute;
-    top: -20px; /* aligns with parent’s vertical line */
+    top: -20px;
     left: 0;
     right: 0;
     height: 2px;
     background: #ccc;
 }
+
 section.map_items ul ul ul li::before {
     content: "";
     position: absolute;
@@ -590,25 +707,27 @@ section.map_items ul ul ul li::before {
     background: #ccc;
 }
 
-/*------------------------FINANCING PAGE --------------------------------- */
-/* Financing forms (carlos) */
-#formMain {
-    font-size: var(--font-size-m);
-    font-family: var(--secondary-font);
-    display: grid;
-    gap: 2rem;
+/*  -------------------------------------------------------------------------------
+                              11. FINANCING PAGE
+    ------------------------------------------------------------------------------- */
 
-    @media (width > 676px) {
-        grid-template-columns: 1fr 1fr;
-    }
+
+#formMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+
+label:not(#i-agree-label) {
+    margin-bottom: 1rem;
 }
 
 .floating-element {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px #000000;
-    width: 100%;
+    box-shadow: 0 4px 8px #000;
 }
 
 #financeFormHeading {
@@ -638,26 +757,18 @@ input {
     accent-color: var(--primary-clr-light);
 }
 
-input:not([type="checkbox"]) {
-    width: 100%;
-}
+input:not([type="checkbox"]) { width: 100%; }
 
-input #i-agree {
-    cursor: pointer;
-}
+input #i-agree { cursor: pointer; }
 
-input[type="checkbox"]:hover {
-    cursor: pointer;
-}
+input[type="checkbox"]:hover { cursor: pointer; }
 
 select {
     cursor: pointer;
     border: 2px solid;
 }
 
-.form-group {
-    display: grid;
-}
+.form-group { display: grid; }
 
 .form-group-CB:has(#i-agree) {
     grid-column: 1 / -1;
@@ -671,16 +782,29 @@ select {
     word-spacing: 1px;
 }
 
-.asterisk {
-    color: red;
+.financing-form {
+    background-color: var(--primary-clr-light);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-m);
+    cursor: pointer;
+    border: 1px solid var(--primary-clr-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
 }
 
-/*------------------------FINANCING Terms and Conditions PAGE --------------------------------- */
+.asterisk { color: red; }
+
+/*  -------------------------------------------------------------------------------
+                              12. I AGREE TERMS AND CONDITIONS
+    ------------------------------------------------------------------------------- */
 
 #tncHeader {
     font-family: var(--primary-font);
     font-size: var(--font-size-xl);
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 #privacyPolicy {
@@ -693,186 +817,109 @@ select {
     text-decoration: none;
 }
 
-/* End */
-
-/*--------------------------------- My Account ---------------------------------------*/
-#main-my-account {
-    padding: 140px 80px;
-    width: 100%
+.fake-link {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-.floating-element-my-account {
-    padding: 30px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #000000;
-    width: 300px;
-    min-width: 100px;
-    margin: 0 auto;
-    background-color: var(--primary-clr-dark);
+/*  -------------------------------------------------------------------------------
+                              13. CLIENT GUARANTEE
+    ------------------------------------------------------------------------------- */
 
-    @media (width > 676px) {
-        width: 350px;
-    }
 
-    @media (width > 970px) {
-        width: 400px;
-    }
+.section-divider {
+    border: none;
+    border-top: 1px solid #0A2E4E;
+    margin: 3rem 0;
 }
 
-.login-box {
-    position: relative;
-    width: auto;
-    color: white;
-}
-
-#login {
-    font-family: var(--primary-font);
-    font-size: 2.5rem;
+section.client-guarantee h1 {
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    background: var(--primary-clr-dark);
+    color: var(--neutral-lt-color);
+    padding: 3rem 0 2rem;
+    margin: 0 0 1rem 0;
+    border-radius: var(--border-radius);
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
-    @media (width > 676px) {
-        font-size: var(--font-size-l);
-    }
-
-    @media (width > 970px) {
-        font-size: var(--font-size-xl);
-    }
 }
 
-.login-text {
-    font-size: var(--font-size-s);
-    position: static;
-   font-family: var(--secondary-font);
-
-    @media (width > 676px) {
-        font-size: var(--font-size-m);
-    }
-
-    @media (width > 970px) {
-        font-size: var(--font-size-l);
-    }
+.client-guarantee p {
+    font: var(--fw-m) var(--font-size-m)/1.5 var(--secondary-font);
+    color: var(--primary-clr-dark);
+    padding: 2rem;
+    margin: 0;
 }
 
-.input-box {
-    width: 250px;
-    margin: 15px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    @media (width > 676px) {
-        width: 300px;
-    }
-
-    @media (width > 970px) {
-        width: 350px;
-    }
+.client-guarantee ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 2rem auto;
 }
 
-.icon {
-    font-size: 1.2rem;
-    color: var(--accent-clr);
+.client-guarantee ul li {
+    font: var(--fw-m) var(--font-size-m)/1.2 var(--secondary-font);
+    background-color: rgba(244, 180, 0, 0.40);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
 
-    @media (width > 676px) {
-        font-size: 1.3rem;
-    }
-
-    @media (width > 970px) {
-        font-size: var(--font-size-m);
-    }
 }
 
-.remember-forgot {
-    margin: 0 0 10px;
-    font-size: 1.3rem;
+.client-guarantee ul li strong {
+    font: var(--fw-m) var(--font-size-l)/1.2 var(--primary-font);
 }
 
-#account-p {
-    margin-left: 20px;
-    margin-top: 10px;
+.contact-heading h2 {
+    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    padding-left: 2rem;
 }
 
-#forgot-password {
-    color: var(--accent-clr);
-    text-decoration: none;
-    margin-left: 50px;
-
-    @media (width > 676px) {
-        margin-left: 90px;
-    }
-
-    @media (width > 970px) {
-        margin-left: 150px;
-    }
+section.contact-heading {
+    margin-top: 3rem;
+    padding-top: 2rem;
 }
 
-#register {
-    color: var(--accent-clr);
-    text-decoration: none;
-    margin-left: 50px;
-
-    @media (width > 676px) {
-        margin-left: 90px;
-    }
-
-    @media (width > 970px) {
-        margin-left: 150px;
-    }
+section.contact-heading p {
+    padding: 1rem;
+    font: var(--fw-s) var(--font-size-m)/1.2 var(--secondary-font);
 }
 
-#forgot-password:hover {
-    text-decoration: underline;
+a.cta-button:hover,
+a.cta-button:focus-visible {
+    background-color: #0EA5E9;
 }
 
-#register:hover {
-    text-decoration: underline;
-}
 
-#forgot-password:visited {
-    color: mediumpurple;
-}
-
-#register:visited {
-    color: mediumpurple;
-}
-
-#login-button {
-    width: 100%;
-    height: 40px;
-    margin: 20px 0;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: var(--primary-clr-light);
-    border-radius: 40px;
-    font-family: var(--secondary-font);
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-/*------------------------End--------------------------------------- */
-
-/* ---------------- target screens with min 676px, targets tablets ------------------ */
+/*  -------------------------------------------------------------------------------
+                              14. MEDIUM-SIZE MEDIA QUERY
+    ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
-    :root {
-        --nav-height: 242px;
-    }
+    
     .navToggler,
     .navTogglerMenu,
     .menuOpen,
     .menuClosed {
         display: none;
     }
+
     section.nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     section.nav img:first-child {
         height: 152px;
         width: auto;
     }
+
     nav.top {
         position: static;
         display: flex;
@@ -880,6 +927,7 @@ select {
         justify-content: center;
         background-color: transparent;
     }
+
     ul.topnav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -911,34 +959,36 @@ select {
         margin-left: auto;
         margin-right: 2rem;
     }
-    /* header */
+
     .hero {
         background-image: url(../images/X-ray_hero-image_blue.jpg);
     }
+
     .hero-text {
         background: var(--neutral-mid-color);
         padding: 2rem;
         max-width: 60%;
         color: var(--neutral-lt-color);
     }
+
     .hero-text h1 {
         font: var(--fw-b) var(--font-size-m) / 1 var(--primary-font);
         margin: 0 0 1rem 0;
     }
+
     .hero-text p {
         font: var(--fw-m) var(--font-size-xs) / 1.3 var(--secondary-font);
         margin: 0;
-    }
-    header.about_us {
-        padding-top: 245px;
     }
 
     header.about_us section.about_us_text h1 {
         font: var(--fw-b) var(--font-size-m) / 1 var(--primary-font);
     }
+
     header.about_us section.about_us_text p {
         font: var(--fw-m) var(--font-size-s) / 1.3 var(--secondary-font);
     }
+
     section.about_us_text {
         display: flex;
         flex-direction: row;
@@ -946,32 +996,50 @@ select {
         text-align: left;
         gap: 2rem;
     }
+
     section.about_us_text figure {
         width: 50%;
         order: 2;
     }
+
     section.about_us_text article {
         width: 50%;
     }
+    section.about_us_text img {
+        padding-top: 3rem;
+    }
 
-    /* main */
     .six-articles {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         padding: 1rem;
     }
+    .container {
+        max-width: 1400px;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .three-articles {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+   
     section.founders {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
+
     section.founders article.jordan {
         grid-column: 1 / -1;
         justify-self: center;
     }
+
     section.facts ul {
-        font: var(--fw-b) var(--font-size-xl) / 1.5 var(--secondary-font);
+        font: var(--fw-b) var(--font-size-l) / 1.5 var(--secondary-font);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -980,13 +1048,10 @@ select {
         margin: 0 auto;
     }
 
-    /*footer*/
-    .footer {
-        font-size: var(--font-size-m);
-    }
-    section.footer h3 {
-        font-size: 2.5rem;
-    }
+    .footer { font-size: var(--font-size-m); }
+
+    section.footer h3 { font-size: 2.5rem; }
+
     section.footer {
         display: flex;
         flex-direction: column;
@@ -999,26 +1064,25 @@ select {
         justify-content: space-between;
         align-items: center;
     }
+
     .bottom_logos img {
         height: 200px;
         width: auto;
     }
-    .bottom_logos img:first-child {
-        margin-left: 4rem;
-    }
-    .bottom_logos img:last-child {
-        margin-right: 4rem;
-    }
 
-    .sitemap_btn {
-        display: none;
-    }
+    .bottom_logos img:first-child { margin-left: 4rem; }
+
+    .bottom_logos img:last-child { margin-right: 4rem; }
+
+    .sitemap_btn { display: none; }
+
     .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
+
     .footer_articles {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -1026,30 +1090,26 @@ select {
         max-width: 90%;
         margin: 0 auto;
     }
-    .footer article {
-        display: block;
-    }
-    footer a {
-        text-decoration: none;
-    }
-    footer a:link {
-        color: #fff;
-    }
-    footer a:visited {
-        color: var(--primary-clr-light);
-    }
-    footer a:hover {
-        color: red;
-    }
-    footer a:active {
-        color: green;
-    }
+
+    .footer article { display: block; }
+
+    footer a { text-decoration: none; }
+
+    footer a:link { color: #fff; }
+
+    footer a:visited { color: var(--primary-clr-light); }
+
+    footer a:hover { color: red; }
+
+    footer a:active { color: green; }
 }
+   
+/*  -------------------------------------------------------------------------------
+                              14. LARGE-SIZE MEDIA QUERY
+    ------------------------------------------------------------------------------- */
 
 @media (min-width: 970px) {
-    :root {
-        --nav-height: 152px;
-    }
+  
     nav.top {
         position: static;
         display: flex;
@@ -1057,6 +1117,7 @@ select {
         justify-content: center;
         background-color: transparent;
     }
+
     ul.topnav {
         display: flex;
         justify-content: center;
@@ -1089,25 +1150,24 @@ select {
         margin-right: 2rem;
     }
 
-    .hero {
-        background-image: url(../images/X-ray_hero-image_blue.jpg);
-    }
+    .hero { background-image: url(../images/X-ray_hero-image_blue.jpg); }
+
     .hero-text {
         background: var(--neutral-mid-color);
         padding: 2rem;
         max-width: 60%;
         color: var(--neutral-lt-color);
     }
-    header.about_us {
-        padding-top: 150px;
-    }
+
     header.about_us section.about_us_text h1 {
         font: var(--fw-xb) var(--font-size-m) / 1 var(--primary-font);
         padding-top: 2rem;
     }
+
     header.about_us section.about_us_text p {
         font: var(--fw-b) var(--font-size-s) / 1.3 var(--secondary-font);
     }
+
     section.about_us_text {
         display: flex;
         flex-direction: row;
@@ -1119,6 +1179,7 @@ select {
         margin: 0 auto;
         padding: 0 2rem;
     }
+
     section.about_us_text figure {
         width: 40%;
         padding: 2rem;
@@ -1126,6 +1187,7 @@ select {
         justify-content: center;
         margin: 0 auto;
     }
+
     section.about_us_text article {
         width: 60%;
         display: flex;
@@ -1134,14 +1196,15 @@ select {
         margin: 0 auto;
     }
 
-    /* main */
-    .six-articles {
+    .six-articles, .pnx_promise  {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         padding: 1rem;
     }
-    /*footer */
+
+    .pnx_promise .pnx-intro { grid-column: 1 / -1; }
+
     .footer_articles {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -1150,14 +1213,19 @@ select {
         max-width: 90%;
         margin: 0 auto;
     }
+
     section.founders {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+
     section.founders article.jordan {
         grid-column: auto;
         justify-self: auto;
+    }
+     #formMain {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1166,8 +1234,10 @@ select {
         font: var(--fw-xb) var(--font-size-l) / 1 var(--primary-font);
         padding-top: 2rem;
     }
+
     header.about_us section.about_us_text p {
         font: var(--fw-b) var(--font-size-m) / 1.3 var(--secondary-font);
         padding-bottom: 2rem;
     }
+   
 }
