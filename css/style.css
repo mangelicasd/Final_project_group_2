@@ -70,10 +70,6 @@ font-family: "Lato", sans-serif;
     --border-radius: 10px;
     --shadow: 5px 5px 8px #f4b400;
     --margin-left: 2rem;
-
-    /* Nav height */
-    --nav-height: 125px;
-    --header-height: 125px;
 }
 
 /*  -------------------------------------------------------------------------------
@@ -100,7 +96,6 @@ section.nav {
     font-family: var(--secondary-font);
     font-size: var(--font-size-xs);
     font-weight: var(--fw-xs);
-    color: var(--primary-clr-dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -186,8 +181,6 @@ nav.top {
 .nav-logo-right {
     display: none;
 }
-
-/*end of top navigation */
 
 /*  -------------------------------------------------------------------------------
                               4. HEADER SECTIONS
@@ -284,8 +277,6 @@ section.about_us_text img {
     max-width: 600px;
 }
 
-/*end of header*/
-
 /*  -------------------------------------------------------------------------------
                               5. MAIN SECTIONS
     ------------------------------------------------------------------------------- */
@@ -293,11 +284,11 @@ section.about_us_text img {
 main {
     padding: 2rem;
     max-width: 1400px;
+    margin: 2rem auto;
     box-sizing: border-box;
 }
 
-.six-articles {
-    min-height: calc(100vh - var(--header-height));
+.six-articles, .three-articles {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
@@ -310,7 +301,6 @@ main {
 
 .six-articles img {
     width: 100%;
-    /* responsive width */
     aspect-ratio: 1 / 1;
     max-width: 250px;
     height: auto;
@@ -408,7 +398,6 @@ a.cta-button {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    /* margin-top: 125px; use this to show the footer in the pages without main*/
 }
 
 .footer p.sell {
@@ -501,8 +490,6 @@ section.footer h3 {
     transform: translateY(-4px);
 }
 
-
-
 /*  -------------------------------------------------------------------------------
                               9. ABOUT US PAGE
     ------------------------------------------------------------------------------- */
@@ -510,12 +497,6 @@ section.footer h3 {
 
 .three-articles {
     background-color: rgba(244, 180, 0, 0.37);
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    box-sizing: border-box;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 article.elena,
@@ -590,14 +571,25 @@ article.jordan {
 
 section.facts {
     background-color: var(--neutral-lt-color);
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem; 
+    box-sizing: border-box;
+
 }
 
-section.facts h1 {
-    border-bottom: none;
+section.facts h2 {
+    color: #fff;
+    font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
+    background-color: var(--primary-clr-dark);
+    padding: 2rem 1rem;
+    border-bottom: solid 20px var(--accent-clr);
+    border-radius: var(--border-radius);
 }
 
 section.facts ul {
-    font: var(--fw-b) var(--font-size-m) / 1.5 var(--secondary-font);
+    font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
     padding: 2rem;
     list-style-type: square;
     list-style-position: inside;
@@ -609,7 +601,7 @@ section.facts ul {
 
 header.map h2 {
     padding: 1.5rem;
-    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-m)/1.2 var(--primary-font);
     color: var(--primary-clr-dark);
     background: var(--neutral-lt-color);
     display: flex;
@@ -657,7 +649,6 @@ section.map_items li {
     margin: 1rem 0;
 }
 
-/* Nested lists */
 section.map_items ul ul {
     margin-top: 2rem;
     display: flex;
@@ -689,21 +680,13 @@ section.map_items a {
     color: var(--primary-clr-dark);
 }
 
-section.map_items a:link {
-    color: var(--primary-clr-dark);
-}
+section.map_items a:link { color: var(--primary-clr-dark); }
 
-section.map_items a:visited {
-    color: var(--primary-clr-dark);
-}
+section.map_items a:visited { color: var(--primary-clr-dark); }
 
-section.map_items a:hover {
-    color: red;
-}
+section.map_items a:hover { color: red; }
 
-section.map_items a:active {
-    color: green;
-}
+section.map_items a:active { color: green; }
 
 /* connector lines */
 
@@ -711,7 +694,6 @@ section.map_items ul ul::before {
     content: "";
     position: absolute;
     top: -20px;
-    /* aligns with parent’s vertical line */
     left: 0;
     right: 0;
     height: 2px;
@@ -733,14 +715,12 @@ section.map_items ul ul ul li::before {
     ------------------------------------------------------------------------------- */
 
 
-form {
+#formMain {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
-
-    @media (width > 676px) {
-        grid-template-columns: 1fr 1fr;
-    }
 }
+
 
 label:not(#i-agree-label) {
     margin-bottom: 1rem;
@@ -785,26 +765,18 @@ input {
     accent-color: var(--primary-clr-light);
 }
 
-input:not([type="checkbox"]) {
-    width: 100%;
-}
+input:not([type="checkbox"]) { width: 100%; }
 
-input #i-agree {
-    cursor: pointer;
-}
+input #i-agree { cursor: pointer; }
 
-input[type="checkbox"]:hover {
-    cursor: pointer;
-}
+input[type="checkbox"]:hover { cursor: pointer; }
 
 select {
     cursor: pointer;
     border: 2px solid;
 }
 
-.form-group {
-    display: grid;
-}
+.form-group { display: grid; }
 
 .form-group-CB:has(#i-agree) {
     grid-column: 1 / -1;
@@ -830,9 +802,7 @@ select {
 
 }
 
-.asterisk {
-    color: red;
-}
+.asterisk { color: red; }
 
 /*  -------------------------------------------------------------------------------
                               12. I AGREE TERMS AND CONDITIONS
@@ -842,6 +812,7 @@ select {
     font-family: var(--primary-font);
     font-size: var(--font-size-xl);
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 #privacyPolicy {
@@ -863,12 +834,7 @@ select {
 /*  -------------------------------------------------------------------------------
                               13. CLIENT GUARANTEE
     ------------------------------------------------------------------------------- */
-main {
-    padding: 2rem;
-    max-width: 1400px;
-    margin: 2rem auto;
-    box-sizing: border-box;
-}
+
 
 .section-divider {
     border: none;
@@ -943,10 +909,7 @@ a.cta-button:focus-visible {
     ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
-    :root {
-        --nav-height: 242px;
-    }
-
+    
     .navToggler,
     .navTogglerMenu,
     .menuOpen,
@@ -1005,7 +968,6 @@ a.cta-button:focus-visible {
         margin-right: 2rem;
     }
 
-    /* header */
     .hero {
         background-image: url(../images/X-ray_hero-image_blue.jpg);
     }
@@ -1051,9 +1013,10 @@ a.cta-button:focus-visible {
     section.about_us_text article {
         width: 50%;
     }
-  
+    section.about_us_text img {
+        padding-top: 3rem;
+    }
 
-    /* main */
     .six-articles {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1083,10 +1046,8 @@ a.cta-button:focus-visible {
         justify-self: center;
     }
 
-  
-
     section.facts ul {
-        font: var(--fw-b) var(--font-size-xl) / 1.5 var(--secondary-font);
+        font: var(--fw-b) var(--font-size-l) / 1.5 var(--secondary-font);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1095,14 +1056,9 @@ a.cta-button:focus-visible {
         margin: 0 auto;
     }
 
-    /*footer*/
-    .footer {
-        font-size: var(--font-size-m);
-    }
+    .footer { font-size: var(--font-size-m); }
 
-    section.footer h3 {
-        font-size: 2.5rem;
-    }
+    section.footer h3 { font-size: 2.5rem; }
 
     section.footer {
         display: flex;
@@ -1122,17 +1078,11 @@ a.cta-button:focus-visible {
         width: auto;
     }
 
-    .bottom_logos img:first-child {
-        margin-left: 4rem;
-    }
+    .bottom_logos img:first-child { margin-left: 4rem; }
 
-    .bottom_logos img:last-child {
-        margin-right: 4rem;
-    }
+    .bottom_logos img:last-child { margin-right: 4rem; }
 
-    .sitemap_btn {
-        display: none;
-    }
+    .sitemap_btn { display: none; }
 
     .footer {
         display: flex;
@@ -1149,40 +1099,25 @@ a.cta-button:focus-visible {
         margin: 0 auto;
     }
 
-    .footer article {
-        display: block;
-    }
+    .footer article { display: block; }
 
-    footer a {
-        text-decoration: none;
-    }
+    footer a { text-decoration: none; }
 
-    footer a:link {
-        color: #fff;
-    }
+    footer a:link { color: #fff; }
 
-    footer a:visited {
-        color: var(--primary-clr-light);
-    }
+    footer a:visited { color: var(--primary-clr-light); }
 
-    footer a:hover {
-        color: red;
-    }
+    footer a:hover { color: red; }
 
-    footer a:active {
-        color: green;
-    }
+    footer a:active { color: green; }
 }
-
+   
 /*  -------------------------------------------------------------------------------
                               14. LARGE-SIZE MEDIA QUERY
     ------------------------------------------------------------------------------- */
 
 @media (min-width: 970px) {
-    :root {
-        --nav-height: 152px;
-    }
-
+  
     nav.top {
         position: static;
         display: flex;
@@ -1223,9 +1158,7 @@ a.cta-button:focus-visible {
         margin-right: 2rem;
     }
 
-    .hero {
-        background-image: url(../images/X-ray_hero-image_blue.jpg);
-    }
+    .hero { background-image: url(../images/X-ray_hero-image_blue.jpg); }
 
     .hero-text {
         background: var(--neutral-mid-color);
@@ -1271,7 +1204,6 @@ a.cta-button:focus-visible {
         margin: 0 auto;
     }
 
-    /* main */
     .six-articles, .pnx_promise  {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1279,11 +1211,8 @@ a.cta-button:focus-visible {
         padding: 1rem;
     }
 
-    .pnx_promise .pnx-intro {
-        grid-column: 1 / -1; 
-    }
+    .pnx_promise .pnx-intro { grid-column: 1 / -1; }
 
-    /*footer */
     .footer_articles {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -1303,6 +1232,9 @@ a.cta-button:focus-visible {
         grid-column: auto;
         justify-self: auto;
     }
+     #formMain {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1315,4 +1247,5 @@ a.cta-button:focus-visible {
         font: var(--fw-b) var(--font-size-m) / 1.3 var(--secondary-font);
         padding-bottom: 2rem;
     }
+   
 }
