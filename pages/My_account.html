@@ -53,28 +53,43 @@
       <div class="login-box">
         <form action="post">
           <h2 id="login">Login</h2>
+          
           <div class="input-box">
-            <label>Email</label>
+           
+           <div class="label-row">
+           
+            <label class="login-text">Email</label>
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" id="loginEmail" required />
+            <input type="email" id="loginEmail" name="email" required />
+            
+            </div>
+            
           </div>
           <div class="input-box">
-            <label>Password</label>
+           
+            <div class="label-row">
+           
+            <label class="login-text" for="loginPassword">Password</label>
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" id="loginPassword" required />
+            <input type="password" id="loginPassword" name="password" required />
+            
+            </div>
+            
           </div>
           <div class="remember-forgot">
             <label> <input type="checkbox" /> Remember Me </label>
             <a href="#" id="forgot-password">Forgot Password?</a>
-            <button type="submit">Login</button>
+            <button type="submit" id="login-button">Login</button>
             <div class="register-link"></div>
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p id="account-p">Don't have an account? <a href="#" id="register">Register</a></p>
           </div>
         </form>
       </div>
       
       </div>
+      
       <!-- Carlos END -->
+      
     </main>
 
     <footer>
