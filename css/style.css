@@ -378,6 +378,26 @@ a.cta-button {
     height: auto;
     display: block;
 }
+.contact-intro {
+    font: italic var(--fw-b) var(--font-size-l) / 1.5 var(--secondary-font);
+    display: block;
+    margin-top: 1rem;      
+}
+.email-link {
+    color: var(--primary-clr-dark);
+    font-weight: var(--fw-m);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: var(--accent-clr);
+}
+
+
+
+main a:hover[href="#"]{
+cursor: default;}
 
 /*  -------------------------------------------------------------------------------
                               7. FOOTER
@@ -896,7 +916,7 @@ a.cta-button:focus-visible {
     background-color: #0EA5E9;
 }
 /*  -------------------------------------------------------------------------------
-                              14. MU ACCOUNT/LOGIN
+                              14. MY ACCOUNT/LOGIN
     ------------------------------------------------------------------------------- */
 #main-my-account {
     padding: 140px 80px;
@@ -994,6 +1014,9 @@ a.cta-button:focus-visible {
     font-family: var(--secondary-font);
     font-size: 1.2em;
     font-weight: 300;
+}
+main.products p {
+    font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
 }
 
 /*  -------------------------------------------------------------------------------
@@ -1339,6 +1362,10 @@ a.cta-button:focus-visible {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
 
     section.founders article.jordan {
         grid-column: auto;
