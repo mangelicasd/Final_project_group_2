@@ -8,9 +8,6 @@ font-family: "Lato", sans-serif;
   font-weight: 100; */
 /*navigation - hidden*/
 
-
-
-
 /*  -------------------------------------------------------------------------------
                                TABLE OF CONTENT
     -------------------------------------------------------------------------------
@@ -222,7 +219,6 @@ header.hero {
     font: var(--fw-s) var(--font-size-xs) / 1.5 var(--secondary-font);
     margin: 0;
 }
-
 
 section.about_us_text {
     background-color: var(--primary-clr-light);
@@ -752,11 +748,6 @@ label:not(#i-agree-label) {
     font-family: var(--secondary-font);
     text-align: center;
     margin: 1rem 0 2rem 0;
-}
-
-#formMain {
-    font-size: var(--font-size-m);
-    font-family: var(--secondary-font);
 }
 
 input {
