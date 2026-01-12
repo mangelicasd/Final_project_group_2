@@ -764,7 +764,7 @@ input #i-agree { cursor: pointer; }
 
 input[type="checkbox"]:hover { cursor: pointer; }
 
-select {
+.select {
     cursor: pointer;
     border: 2px solid;
 }
@@ -1202,7 +1202,7 @@ a.cta-button:focus-visible {
     footer a:hover { color: red; }
 
     footer a:active { color: green; }
-    floating-element-my-account { 
+    .floating-element-my-account { 
         width: 380px; 
     }
 
@@ -1332,14 +1332,7 @@ a.cta-button:focus-visible {
 
     .pnx_promise .pnx-intro { grid-column: 1 / -1; }
 
-    .footer_articles {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-
-        max-width: 90%;
-        margin: 0 auto;
-    }
+    
 
     section.founders {
         display: grid;
