@@ -1346,6 +1346,21 @@ a.cta-button:focus-visible {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+        section.founders article.jordan {
+            grid-column: auto;
+            justify-self: auto;
+        }
+    
+    /* Large screen Styling for Products.html & equipment.html */
+    /* Author: Bill */
+        .equipmentMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: stretch;
+        /*gap: 10px;*/
+    }
+    /* end */    
+/*}
 
     section.founders article.jordan {
         grid-column: auto;
