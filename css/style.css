@@ -112,6 +112,7 @@ section.nav {
 section.nav img {
     height: 125px;
     width: auto;
+    margin-left: 3rem;
 }
 
 section.nav a {
