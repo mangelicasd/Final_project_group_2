@@ -61,13 +61,15 @@
             ensuring continued confidence long after installation. Our 24/7 Client Hotline provides direct access to
             knowledgeable support whenever and wherever it’s needed, minimizing downtime and maximizing performance.
             With transparency, responsiveness, and reliability at the core of our service approach, you can trust that
-            PNX is with you every step of the way.
+            PNX is with you every step of the way.<br />
+            <span class="contact-intro"> For assistance, contact us at </span>
+            <a href="mailto:support@pnxray.com" class="email-link">support@pnxray.com</a>.
           </p>
         </article>
 
         <article class="client-services">
           <h2>Client Services</h2>
-            <p>
+          <p>
             At Pacific Northwest X-Ray Inc., our Client Services team is dedicated to providing responsive,
             knowledgeable support from the moment a need arises. We take a proactive approach to service, working
             closely with medical, veterinary, and research professionals to ensure their imaging systems operate with
@@ -156,24 +158,24 @@
       </section>
     </footer>
     <button id="backToTop" class="back-to-top">
-         <i class="fa-solid fa-arrow-up"></i>
-      </button>
-      <script>
-         const backToTop = document.getElementById("backToTop");
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+      const backToTop = document.getElementById("backToTop");
 
-         window.addEventListener("scroll", () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrolledPercent = scrollTop / docHeight;
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrolledPercent = scrollTop / docHeight;
 
-            backToTop.classList.toggle("visible", scrolledPercent > 0.9);
-         });
-         backToTop.addEventListener("click", () => {
-            window.scrollTo({
-               top: 0,
-               behavior: "smooth"
-            });
-         });
-      </script>
+        backToTop.classList.toggle("visible", scrolledPercent > 0.9);
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    </script>
   </body>
 </html>
