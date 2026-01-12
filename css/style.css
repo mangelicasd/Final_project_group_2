@@ -1362,19 +1362,7 @@ main.products p {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-        
->>>>>>> Stashed changes
-=======
-        
->>>>>>> Stashed changes
 
-    section.founders article.jordan {
-        grid-column: auto;
-        justify-self: auto;
-    }
      #formMain {
         grid-template-columns: 1fr 1fr;
     }
