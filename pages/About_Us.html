@@ -102,7 +102,7 @@
             
             <section class="facts">
                <article>
-                   <h1>Fascinating PNX Facts...</h1>
+                   <h2>Fascinating PNX Facts...</h2>
                    <ul>
                        <li>Founded in the 1997</li>
                        <li>Driven by diverse medical expertise</li>
@@ -123,7 +123,7 @@
         </div>
         <section class="footer_articles">
           <article>
-            <h2><a href="Products.html">Product Catalog</a></h2>
+            <h3><a href="Products.html">Product Catalog</a></h3>
             <ul>
               <li><a href="equipment.html">Equipment</a></li>
               <li>Supplies</li>
@@ -131,14 +131,14 @@
             </ul>
           </article>
           <article>
-            <h2><a href="Support.html">Services and Support</a></h2>
+            <h3><a href="Support.html">Services and Support</a></h3>
             <ul>
               <li>Service Programs</li>
               <li>Service Request</li>
             </ul>
           </article>
           <article>
-            <h2><a href="PNX_promise.html">PNX Promise</a></h2>
+            <h3><a href="PNX_promise.html">PNX Promise</a></h3>
             <ul>
               <li><a href="Client_Guarantee.html">Client Guarantee</a></li>
               <li>Return Policy</li>
@@ -146,7 +146,7 @@
             </ul>
           </article>
           <article>
-            <h2><a href="About_Us.html">About Us</a></h2>
+            <h3><a href="About_Us.html">About Us</a></h3>
             <ul>
               <li>Overview</li>
               <li>Testimonials</li>
@@ -154,7 +154,7 @@
             </ul>
           </article>
           <article>
-            <h2><a href="My_account.html">My Account</a></h2>
+            <h3><a href="My_account.html">My Account</a></h3>
             <ul>
               <li>History</li>
               <li>Favorites</li>
@@ -168,7 +168,26 @@
         <p class="copyright">&copy; 1997-2025 Pacific Northwest X-Ray Inc. All Rights Reserved</p>
       </section>
     </footer>
-        
+    <button id="backToTop" class="back-to-top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <script>
+         const backToTop = document.getElementById("backToTop");
+
+         window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrolledPercent = scrollTop / docHeight;
+
+            backToTop.classList.toggle("visible", scrolledPercent > 0.9);
+         });
+         backToTop.addEventListener("click", () => {
+            window.scrollTo({
+               top: 0,
+               behavior: "smooth"
+            });
+         });
+      </script>    
                   
     </body>
 </html>

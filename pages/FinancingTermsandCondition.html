@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Account</title>
+    <title>Terms And Conditions</title>
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +15,11 @@
 
     <!-- logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
-  <body id="body-my-account">
+  <body>
     <section class="nav">
       <img src="../images/white_logo.png" alt="logo" />
 
@@ -46,50 +47,24 @@
 
     <header></header>
 
-    <main id="main-my-account">
-    
-      <div class="floating-element-my-account">
-     
-      <div class="login-box">
-        <form action="post">
-          <h2 id="login">Login</h2>
-          
-          <div class="input-box">
-           
-           <div class="label-row">
-           
-            <label class="login-text">Email</label>
-            <span class="icon"><ion-icon name="mail"></ion-icon></span>
-            <input type="email" id="loginEmail" name="email" required />
-            
-            </div>
-            
-          </div>
-          <div class="input-box">
-           
-            <div class="label-row">
-           
-            <label class="login-text" for="loginPassword">Password</label>
-            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="password" id="loginPassword" name="password" required />
-            
-            </div>
-            
-          </div>
-          <div class="remember-forgot">
-            <label> <input type="checkbox" /> Remember Me </label>
-            <a href="#" id="forgot-password">Forgot Password?</a>
-            <button type="submit" id="login-button">Login</button>
-            <div class="register-link"></div>
-            <p id="account-p">Don't have an account? <a href="#" id="register">Register</a></p>
-          </div>
-        </form>
+    <main>
+      <!--I Agree Terms and Conditions-->
+      <h2 id="tncHeader">Terms And Conditions</h2>
+
+      <div class="form-group-P">
+        <!-- div NEW -->
+
+        <p id="privacyPolicy">
+          You understand that by clicking on the <u id="underline" class="fake-link">I Agree</u> checkbox immediately following this
+          notice, under the Fair Credit Reporting Act you authorize Pacific Northwest X-Ray Inc. to obtain such
+          information to conduct a pre-qualification for credit. Furthermore, if it is determined that you pre-qualify
+          for a loan product you are also authorizing the release of business and/or personal credit information to
+          Pacific Northwest X-Ray Inc., its affiliates, or assignees including, one or more alternate third-party
+          funding providers, Pacific Northwest X-Ray Inc. funding sources, and its and their third-party service
+          providers for purpose of extending credit. I understand that this does not obligate me in any way to purchase
+          equipment. I certify that I am a business owner that is personally liable for the business.
+        </p>
       </div>
-      
-      </div>
-      
-      <!-- Carlos END -->
-      
     </main>
 
     <footer>
@@ -145,9 +120,6 @@
         <p class="copyright">&copy; 1997-2025 Pacific Northwest X-Ray Inc. All Rights Reserved</p>
       </section>
     </footer>
-    <!-- JavaScript for Login Page -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- END -->
+    
   </body>
 </html>
