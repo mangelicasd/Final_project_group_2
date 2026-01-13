@@ -949,7 +949,7 @@ a.cta-button:focus-visible {
     border-radius: 10px;
     box-shadow: 0 4px 8px #000000;
     width: 300px;
-    min-width: 100px;
+    
     margin: 0 auto;
     background-color: var(--primary-clr-dark);
 }
@@ -973,8 +973,8 @@ a.cta-button:focus-visible {
 }
 
 .input-box {
-    width: 250px;
-    margin: 15px 0;
+    width: 100%;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -986,6 +986,7 @@ a.cta-button:focus-visible {
 }
 
 .remember-forgot {
+    font-family: var(--secondary-font);
     margin: 0 0 10px;
     font-size: 1.3rem;
 }
@@ -993,18 +994,19 @@ a.cta-button:focus-visible {
 #account-p {
     margin-left: 20px;
     margin-top: 10px;
+    font-family: var(--secondary-font);
 }
 
 #forgot-password {
     color: var(--accent-clr);
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #register {
     color: var(--accent-clr);
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #forgot-password:hover {
@@ -1259,7 +1261,7 @@ main.products p {
     section.about_us_text img {
         padding-top: 3rem;
     }
-
+    
     .six-articles {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1387,7 +1389,7 @@ main.products p {
     }
 
     .input-box {
-        width: 250px;
+        width: auto;
     }
 
     .icon {
@@ -1542,11 +1544,11 @@ main.products p {
     }
 
     #forgot-password {
-        margin-left: 150px;
+        margin-left: 110px;
     }
 
     #register {
-        margin-left: 150px;
+        margin-left: 110px;
     }
 }
 
