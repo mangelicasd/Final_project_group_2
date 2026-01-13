@@ -1365,12 +1365,8 @@ main.products p {
         color: red;
     }
 
-    footer a:active {
-        color: green;
-    }
-    .floating-element-my-account {
-        width: 380px;
-    }
+    footer a:active { color: green; }
+    .floating-element-my-account { width: 380px; }
 
     #login {
         font-size: var(--font-size-l);
@@ -1506,6 +1502,10 @@ main.products p {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+    section.founders article.jordan {
+        grid-column: auto;
+        justify-self: auto;
     }
 
     #formMain {
