@@ -69,8 +69,6 @@ font-family: "Lato", sans-serif;
     --margin-left: 2rem;
 }
 
-
-
 /*  -------------------------------------------------------------------------------
                                 2. GLOBAL STYLES
     ------------------------------------------------------------------------------- */
@@ -520,7 +518,8 @@ article.jordan {
     border-radius: var(--border-radius);
 }
 
-.three-articles h1, .h1-support  {
+.three-articles h1,
+.h1-support {
     color: #fff;
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     background-color: var(--primary-clr-dark);
@@ -744,8 +743,6 @@ label:not(#i-agree-label) {
     margin: 3px 0;
     font-family: var(--secondary-font);
 }
-
-
 
 .floating-element {
     background-color: #fff;
@@ -1132,7 +1129,6 @@ main.products p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-decoration: none;
     text-align: center;
-    
 }
 
 .form-group:has(.contact-us-btn) {
@@ -1146,7 +1142,8 @@ main.products p {
 #support-phone-number:hover {
     text-decoration: underline;
 }
-.icon-support, .icon-call {
+.icon-support,
+.icon-call {
     color: var(--primary-clr-dark);
 }
 
@@ -1373,8 +1370,12 @@ main.products p {
         color: red;
     }
 
-    footer a:active { color: green; }
-    .floating-element-my-account { width: 380px; }
+    footer a:active {
+        color: green;
+    }
+    .floating-element-my-account {
+        width: 380px;
+    }
 
     #login {
         font-size: var(--font-size-l);
