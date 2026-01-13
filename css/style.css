@@ -70,6 +70,107 @@ font-family: "Lato", sans-serif;
     --margin-left: 2rem;
 }
 
+/*-----------------------------Carlos Support Page--------------------------------------*/
+.container-support {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    font-size: 9rem;
+}
+
+.h1-support {
+    font-family: var(--primary-font);
+    font-size: var(--font-size-xl);
+    text-align: center;
+}
+
+.container-question-icon,
+.container-phone-icon {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.service-and-support-parag {
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-m);
+    padding: 3rem 1rem;
+    line-height: 3ch;
+}
+
+.floating-element-support {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #000;
+}
+
+#supportFormHeading {
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: var(--font-size-l);
+}
+
+.form-group-RBs {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.form-group:has(#textarea) {
+    grid-column: 1 / -1;
+}
+
+.form-group-RBs p {
+    grid-column: 1 / -1;
+    margin: 0 0 0.5rem;
+}
+
+#contactNotUrgent,
+#contactThisWeek,
+#contactTomorrow,
+#contactToday {
+    width: auto;
+}
+
+.rb {
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-s);
+}
+
+#priority-level-p {
+    font-family: var(--primary-font);
+    font-size: var(--font-size-m);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-us-btn {
+    background-color: var(--primary-clr-light);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-m);
+    cursor: pointer;
+    border: 1px solid var(--primary-clr-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form-group:has(.contact-us-btn) {
+    grid-column: 1 / -1;
+}
+
+#support-phone-number {
+    text-decoration: none;
+}
+
+#support-phone-number:hover {
+    text-decoration: underline;
+}
+
+/* END */
+
 /*  -------------------------------------------------------------------------------
                                 2. GLOBAL STYLES
     ------------------------------------------------------------------------------- */
@@ -86,7 +187,6 @@ html {
 /*  -------------------------------------------------------------------------------
                                 3. NAV
     ------------------------------------------------------------------------------- */
-
 
 section.nav {
     background-color: var(--primary-clr-dark);
@@ -286,7 +386,8 @@ main {
     box-sizing: border-box;
 }
 
-.six-articles, .three-articles {
+.six-articles,
+.three-articles {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem;
@@ -321,7 +422,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
 
 .six-articles p,
@@ -381,7 +481,7 @@ a.cta-button {
 .contact-intro {
     font: italic var(--fw-b) var(--font-size-l) / 1.5 var(--secondary-font);
     display: block;
-    margin-top: 1rem;      
+    margin-top: 1rem;
 }
 .email-link {
     color: var(--primary-clr-dark);
@@ -394,10 +494,9 @@ a.cta-button {
     color: var(--accent-clr);
 }
 
-
-
-main a:hover[href="#"]{
-cursor: default;}
+main a:hover[href="#"] {
+    cursor: default;
+}
 
 /*  -------------------------------------------------------------------------------
                               7. FOOTER
@@ -495,7 +594,7 @@ section.footer h3 {
     transition: 0.3s ease;
 }
 .back-to-top.visible {
-  display: flex;
+    display: flex;
 }
 
 .back-to-top i {
@@ -511,7 +610,6 @@ section.footer h3 {
 /*  -------------------------------------------------------------------------------
                               9. ABOUT US PAGE
     ------------------------------------------------------------------------------- */
-
 
 .three-articles {
     background-color: rgba(244, 180, 0, 0.37);
@@ -592,9 +690,8 @@ section.facts {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem; 
+    padding: 2rem;
     box-sizing: border-box;
-
 }
 
 section.facts h2 {
@@ -619,7 +716,7 @@ section.facts ul {
 
 header.map h2 {
     padding: 1.5rem;
-    font: var(--fw-b) var(--font-size-m)/1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-m) / 1.2 var(--primary-font);
     color: var(--primary-clr-dark);
     background: var(--neutral-lt-color);
     display: flex;
@@ -698,13 +795,21 @@ section.map_items a {
     color: var(--primary-clr-dark);
 }
 
-section.map_items a:link { color: var(--primary-clr-dark); }
+section.map_items a:link {
+    color: var(--primary-clr-dark);
+}
 
-section.map_items a:visited { color: var(--primary-clr-dark); }
+section.map_items a:visited {
+    color: var(--primary-clr-dark);
+}
 
-section.map_items a:hover { color: red; }
+section.map_items a:hover {
+    color: red;
+}
 
-section.map_items a:active { color: green; }
+section.map_items a:active {
+    color: green;
+}
 
 /* connector lines */
 
@@ -732,16 +837,15 @@ section.map_items ul ul ul li::before {
                               11. FINANCING PAGE
     ------------------------------------------------------------------------------- */
 
-
-#formMain {
+#formMain fieldset {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    width: auto;
 }
 
-
 label:not(#i-agree-label) {
-    margin-bottom: 1rem;
+    margin: 3px 0;
 }
 
 .floating-element {
@@ -751,7 +855,8 @@ label:not(#i-agree-label) {
     box-shadow: 0 4px 8px #000;
 }
 
-#financeFormHeading {
+#financeFormHeading,
+#supportFormHeading {
     text-align: center;
     font-size: var(--font-size-l);
     margin-bottom: 1rem;
@@ -763,12 +868,17 @@ label:not(#i-agree-label) {
     font-size: var(--font-size-s);
     margin: 1rem 2rem 0;
     line-height: normal;
+    grid-column: 1 / -1;
+    text-align: center;
 }
 
 #completeForm {
+    display: flex;
+    justify-content: center;
     font-family: var(--secondary-font);
     text-align: center;
     margin: 1rem 0 2rem 0;
+    grid-column: 1 / -1;
 }
 
 input {
@@ -778,18 +888,27 @@ input {
     accent-color: var(--primary-clr-light);
 }
 
-input:not([type="checkbox"]) { width: 100%; }
+input:not([type="checkbox"]) {
+    width: 100%;
+}
 
-input #i-agree { cursor: pointer; }
+input #i-agree {
+    cursor: pointer;
+}
 
-input[type="checkbox"]:hover { cursor: pointer; }
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
 
 .select {
     cursor: pointer;
     border: 2px solid;
 }
 
-.form-group { display: grid; }
+.form-group {
+    display: grid;
+    font-size: var(--font-size-s);
+}
 
 .form-group-CB:has(#i-agree) {
     grid-column: 1 / -1;
@@ -803,7 +922,13 @@ input[type="checkbox"]:hover { cursor: pointer; }
     word-spacing: 1px;
 }
 
-.financing-form {
+.form-group-support {
+    display: grid;
+    grid-column: 1 / -1;
+    margin: 1rem;
+}
+
+.financing-form-btn {
     background-color: var(--primary-clr-light);
     color: white;
     padding: 1rem 2rem;
@@ -812,10 +937,11 @@ input[type="checkbox"]:hover { cursor: pointer; }
     cursor: pointer;
     border: 1px solid var(--primary-clr-dark);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
 }
 
-.asterisk { color: red; }
+.asterisk {
+    color: red;
+}
 
 /*  -------------------------------------------------------------------------------
                               12. I AGREE TERMS AND CONDITIONS
@@ -848,15 +974,14 @@ input[type="checkbox"]:hover { cursor: pointer; }
                               13. CLIENT GUARANTEE
     ------------------------------------------------------------------------------- */
 
-
 .section-divider {
     border: none;
-    border-top: 1px solid #0A2E4E;
+    border-top: 1px solid #0a2e4e;
     margin: 3rem 0;
 }
 
 section.client-guarantee h1 {
-    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     background: var(--primary-clr-dark);
     color: var(--neutral-lt-color);
     padding: 3rem 0 2rem;
@@ -867,11 +992,10 @@ section.client-guarantee h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
 
 .client-guarantee p {
-    font: var(--fw-m) var(--font-size-m)/1.5 var(--secondary-font);
+    font: var(--fw-m) var(--font-size-m) / 1.5 var(--secondary-font);
     color: var(--primary-clr-dark);
     padding: 2rem;
     margin: 0;
@@ -884,20 +1008,19 @@ section.client-guarantee h1 {
 }
 
 .client-guarantee ul li {
-    font: var(--fw-m) var(--font-size-m)/1.2 var(--secondary-font);
-    background-color: rgba(244, 180, 0, 0.40);
+    font: var(--fw-m) var(--font-size-m) / 1.2 var(--secondary-font);
+    background-color: rgba(244, 180, 0, 0.4);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.5rem;
     margin-bottom: 1rem;
-
 }
 
 .client-guarantee ul li strong {
-    font: var(--fw-m) var(--font-size-l)/1.2 var(--primary-font);
+    font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
 }
 
 .contact-heading h2 {
-    font: var(--fw-b) var(--font-size-l)/1.2 var(--primary-font);
+    font: var(--fw-b) var(--font-size-l) / 1.2 var(--primary-font);
     padding-left: 2rem;
 }
 
@@ -908,19 +1031,19 @@ section.contact-heading {
 
 section.contact-heading p {
     padding: 1rem;
-    font: var(--fw-s) var(--font-size-m)/1.2 var(--secondary-font);
+    font: var(--fw-s) var(--font-size-m) / 1.2 var(--secondary-font);
 }
 
 a.cta-button:hover,
 a.cta-button:focus-visible {
-    background-color: #0EA5E9;
+    background-color: #0ea5e9;
 }
 /*  -------------------------------------------------------------------------------
                               14. MY ACCOUNT/LOGIN
     ------------------------------------------------------------------------------- */
 #main-my-account {
     padding: 140px 80px;
-    width: 100%
+    width: 100%;
 }
 
 .floating-element-my-account {
@@ -931,7 +1054,7 @@ a.cta-button:focus-visible {
     min-width: 100px;
     margin: 0 auto;
     background-color: var(--primary-clr-dark);
-   }
+}
 
 .login-box {
     position: relative;
@@ -948,7 +1071,7 @@ a.cta-button:focus-visible {
 .login-text {
     font-size: var(--font-size-s);
     position: static;
-   font-family: var(--secondary-font);
+    font-family: var(--secondary-font);
 }
 
 .input-box {
@@ -1024,7 +1147,6 @@ main.products p {
     ------------------------------------------------------------------------------- */
 
 @media (min-width: 676px) {
-    
     .navToggler,
     .navTogglerMenu,
     .menuOpen,
@@ -1149,7 +1271,6 @@ main.products p {
         margin: 0 auto;
     }
 
-   
     section.founders {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1171,9 +1292,13 @@ main.products p {
         margin: 0 auto;
     }
 
-    .footer { font-size: var(--font-size-m); }
+    .footer {
+        font-size: var(--font-size-m);
+    }
 
-    section.footer h3 { font-size: 2.5rem; }
+    section.footer h3 {
+        font-size: 2.5rem;
+    }
 
     section.footer {
         display: flex;
@@ -1193,11 +1318,17 @@ main.products p {
         width: auto;
     }
 
-    .bottom_logos img:first-child { margin-left: 4rem; }
+    .bottom_logos img:first-child {
+        margin-left: 4rem;
+    }
 
-    .bottom_logos img:last-child { margin-right: 4rem; }
+    .bottom_logos img:last-child {
+        margin-right: 4rem;
+    }
 
-    .sitemap_btn { display: none; }
+    .sitemap_btn {
+        display: none;
+    }
 
     .footer {
         display: flex;
@@ -1214,19 +1345,31 @@ main.products p {
         margin: 0 auto;
     }
 
-    .footer article { display: block; }
+    .footer article {
+        display: block;
+    }
 
-    footer a { text-decoration: none; }
+    footer a {
+        text-decoration: none;
+    }
 
-    footer a:link { color: #fff; }
+    footer a:link {
+        color: #fff;
+    }
 
-    footer a:visited { color: var(--primary-clr-light); }
+    footer a:visited {
+        color: var(--primary-clr-light);
+    }
 
-    footer a:hover { color: red; }
+    footer a:hover {
+        color: red;
+    }
 
-    footer a:active { color: green; }
-    .floating-element-my-account { 
-        width: 380px; 
+    footer a:active {
+        color: green;
+    }
+    .floating-element-my-account {
+        width: 380px;
     }
 
     #login {
@@ -1242,24 +1385,23 @@ main.products p {
     }
 
     .icon {
-       font-size: 1.3rem;
+        font-size: 1.3rem;
     }
 
-     #forgot-password {
-       margin-left: 90px;
+    #forgot-password {
+        margin-left: 90px;
     }
 
     #register {
-       margin-left: 90px;
+        margin-left: 90px;
     }
 }
-   
+
 /*  -------------------------------------------------------------------------------
                               16. LARGE-SIZE MEDIA QUERY
     ------------------------------------------------------------------------------- */
 
 @media (min-width: 970px) {
-  
     nav.top {
         position: static;
         display: flex;
@@ -1300,7 +1442,9 @@ main.products p {
         margin-right: 2rem;
     }
 
-    .hero { background-image: url(../images/X-ray_hero-image_blue.jpg); }
+    .hero {
+        background-image: url(../images/X-ray_hero-image_blue.jpg);
+    }
 
     .hero-text {
         background: var(--neutral-mid-color);
@@ -1346,16 +1490,17 @@ main.products p {
         margin: 0 auto;
     }
 
-    .six-articles, .pnx_promise  {
+    .six-articles,
+    .pnx_promise {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         padding: 1rem;
     }
 
-    .pnx_promise .pnx-intro { grid-column: 1 / -1; }
-
-    
+    .pnx_promise .pnx-intro {
+        grid-column: 1 / -1;
+    }
 
     section.founders {
         display: grid;
@@ -1363,14 +1508,14 @@ main.products p {
         gap: 2rem;
     }
 
-     #formMain {
+    #formMain {
         grid-template-columns: 1fr 1fr;
     }
     .floating-element-my-account {
         width: 400px;
     }
 
-     #login {
+    #login {
         font-size: var(--font-size-xl);
     }
 
@@ -1392,8 +1537,7 @@ main.products p {
 
     #register {
         margin-left: 150px;
-     }
-
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1406,5 +1550,4 @@ main.products p {
         font: var(--fw-b) var(--font-size-m) / 1.3 var(--secondary-font);
         padding-bottom: 2rem;
     }
-   
 }
