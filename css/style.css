@@ -814,6 +814,7 @@ input[type="checkbox"]:hover {
 }
 
 .form-group-CB {
+    font-family: var(--secondary-font);
     font-size: var(--font-size-xs);
     margin: 1rem 0 0 0;
     word-spacing: 1px;
