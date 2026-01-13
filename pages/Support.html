@@ -1,57 +1,160 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" >
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Service & Support</title>
-        <link rel="stylesheet" href="../css/reset.css" >
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service & Support</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
 
-        <!-- logos -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-        
-        <link rel="stylesheet" href="../css/style.css" >
-    </head>
-    
-    <body>
-       <section class="nav">
-            <img src="../images/white_logo.png" alt="logo" />
+    <!-- logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <section class="nav">
+      <img src="../images/white_logo.png" alt="logo" />
+
+      <!--hidden checkbox for toggle -->
+      <input type="checkbox" class="navToggler" id="navToggler" />
+
+      <nav class="top">
+        <ul class="topnav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/Products.html">Products</a></li>
+          <li><a href="../pages/Support.html">Support</a></li>
+          <li><a href="../pages/PNX_promise.html">PNX Promise</a></li>
+          <li><a href="../pages/About_Us.html">About Us</a></li>
+          <li><a href="../pages/My_account.html">My account</a></li>
+        </ul>
+      </nav>
+      <!--hamburger icon as label-->
+      <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
+      <!--search button-->
+      <img src="../images/search-button-with-m.png" alt="logo" class="nav-logo-right" />
+
+      <span class="material-icons-outline mi menuOpen"></span>
+      <span class="material-icons-outline mi menuClosed"></span>
+    </section>
+
+    <header class="hero-support">
+      <div class="container-support">
+        <span class="icon-support"><ion-icon name="people"></ion-icon></span>
+      </div>
+
+      <h1 class="h1-support">Service &amp; Support</h1>
+    </header>
+
+    <main>
+      <!--Carlos to add here -->
+
+      <div class="container-question-icon">
+        <span class="icon-call"><ion-icon name="help-circle"></ion-icon></span>
+      </div>
+
+      <p class="service-and-support-parag">
+        Your success and peace of mind are our top priorities. Our team is here to help. Please complete the form below,
+        and we’ll respond within 24 hours to address your needs.
+      </p>
+
+      <!-- FORM -->
+
+      <div class="floating-element-support">
+        <form action="#" method="post" id="formMain">
+          <fieldset>
+            <legend id="supportFormHeading">Contact Us</legend>
+
+            <p id="completeForm">Please complete the form below and submit. All fields are required.</p>
+
+            <div class="form-group-RBs">
+              <p id="priority-level-p">Priority Level</p>
+
+              <div class="rb">
+                <input type="radio" name="contact" id="contactToday" value="today" />
+                <label for="contactToday" class="priority-level-contact">Today</label>
+              </div>
+
+              <div class="rb">
+                <input type="radio" name="contact" id="contactTomorrow" value="tomorrow" />
+                <label for="contactTomorrow" class="priority-level-contact">Tomorrow</label>
+              </div>
+
+              <div class="rb">
+                <input type="radio" name="contact" id="contactThisWeek" value="thisWeek" />
+                <label for="contactThisWeek" class="priority-level-contact">This week</label>
+              </div>
+
+              <div class="rb">
+                <input type="radio" name="contact" id="contactNotUrgent" value="email" />
+                <label for="contactNotUrgent" class="priority-level-contact">Not urgent</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name" id="name-label">Name<span class="asterisk">*</span></label>
+
+              <input id="name" type="text" placeholder="John Doe" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email" id="email-label">Email<span class="asterisk">*</span></label>
+
+              <input id="email" type="email" placeholder="example@email.com" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="bphone">Phone Number<span class="asterisk">*</span></label>
+
+              <input type="tel" id="bphone" name="phone" placeholder="(000) 000-0000" required />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+
+              <input type="text" id="address" name="address" />
+            </div>
             
-            <!--hidden checkbox for toggle -->
-            <input type="checkbox" class="navToggler" id="navToggler" />
+            <div class="form-group">
+              <label for="textarea">How can we help you?</label>
+
+              <textarea name="how-can-we-help" id="textarea" cols="40" rows="10" placeholder="I need help with..."></textarea>
+            </div>
+
+            <div class="form-group-CB">
+              <input type="checkbox" id="i-agree" value="i-agree" name="iagree" required />
+
+              <label for="i-agree" id="email-copy">Send a copy to my email</label>
+            </div>
             
-               <nav class="top">
-               <ul class="topnav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/Products.html">Products</a></li>
-                <li><a href="../pages/Support.html">Support</a></li>
-                <li><a href="../pages/PNX_promise.html">PNX Promise</a></li>
-                <li><a href="../pages/About_Us.html">About Us</a></li>
-                <li><a href="../pages/My_account.html">My account</a></li>
-               </ul>
-            </nav>
-            <!--hamburger icon as label-->
-            <label for="navToggler" class="navTogglerMenu"><i class="fa-solid fa-bars"></i></label>
-            <!--search button-->
-            <img src="../images/search-button-with-m.png" alt="logo" class="nav-logo-right">
+            <div class="form-group">
+                <button class="contact-us-btn">Send Message</button>
+            </div>
             
-            <span class="material-icons-outline mi menuOpen"></span>
-            <span class="material-icons-outline mi menuClosed"></span>
-        </section>
-        
-      <header>
-          
-      </header>  
-       
-       <main>
-           <!--Carlos to add here -->
-       </main>
-       
-       <footer>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- END -->
+
+      <div class="container-phone-icon">
+        <span class="icon-call"><ion-icon name="call"></ion-icon></span>
+      </div>
+
+      <p class="service-and-support-parag">
+        Need to speak with someone directly? Call our support team from 8:00 a.m. to 5:00 p.m. Monday through Friday at
+        <a href="tel:+1-800-438-1000" id="support-phone-number">1-800-438-1000.</a>
+      </p>
+    </main>
+
+    <footer>
       <section class="footer">
         <div class="bottom_logos">
           <img src="../images/white_logo.png" alt="logo" />
@@ -104,7 +207,10 @@
         <p class="copyright">&copy; 1997-2025 Pacific Northwest X-Ray Inc. All Rights Reserved</p>
       </section>
     </footer>
-        
-                  
-    </body>
+
+    <!-- JavaScript for Support Page -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- END -->
+  </body>
 </html>
