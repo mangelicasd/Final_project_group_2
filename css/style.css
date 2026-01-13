@@ -370,7 +370,7 @@ a.cta-button {
 }
 .pnx-intro figure {
     display: flex;
-    justify-content: center;s
+    justify-content: center;
     margin: 0 auto 1.5rem;
 }
 .pnx-intro figure img {
@@ -445,7 +445,7 @@ section.footer h3 {
 }
 
 .bottom_logos img:first-child {
-    margin-left: 2rem;
+    margin-left: 2rem; /* this is an additional example of a pseudoclass*/
 }
 
 .bottom_logos img:last-child {
@@ -520,7 +520,7 @@ article.jordan {
     border-radius: var(--border-radius);
 }
 
-.three-articles h1 {
+.three-articles h1, .h1-support  {
     color: #fff;
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     background-color: var(--primary-clr-dark);
@@ -1138,9 +1138,9 @@ main.products p {
 #support-phone-number:hover {
     text-decoration: underline;
 }
-
-
-/* END */
+.icon-support, .icon-call {
+    color: var(--primary-clr-dark);
+}
 
 /*  -------------------------------------------------------------------------------
                               16. MEDIUM-SIZE MEDIA QUERY
