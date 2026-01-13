@@ -742,7 +742,10 @@ section.map_items ul ul ul li::before {
 
 label:not(#i-agree-label) {
     margin: 3px 0;
+    font-family: var(--secondary-font);
 }
+
+
 
 .floating-element {
     background-color: #fff;
@@ -804,6 +807,7 @@ input[type="checkbox"]:hover {
 .form-group {
     display: grid;
     font-size: var(--font-size-s);
+    font-family: var(--secondary-font);
 }
 
 .form-group-CB:has(#i-agree) {
