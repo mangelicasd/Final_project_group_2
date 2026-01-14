@@ -1361,12 +1361,8 @@ main.products p {
         text-decoration: none;
     }
 
-    footer a:link {
+    footer a:link, footer a:visited {
         color: #fff;
-    }
-
-    footer a:visited {
-        color: var(--primary-clr-light);
     }
 
     footer a:hover {
