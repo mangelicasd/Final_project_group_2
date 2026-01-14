@@ -222,9 +222,25 @@
       </section>
     </footer>
 
-    <!-- JavaScript for Support Page -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- END -->
+    <button id="backToTop" class="back-to-top">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <script>
+         const backToTop = document.getElementById("backToTop");
+
+         window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrolledPercent = scrollTop / docHeight;
+
+            backToTop.classList.toggle("visible", scrolledPercent > 0.9);
+         });
+         backToTop.addEventListener("click", () => {
+            window.scrollTo({
+               top: 0,
+               behavior: "smooth"
+            });
+         });
+      </script>
   </body>
 </html>
