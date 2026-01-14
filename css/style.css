@@ -69,8 +69,6 @@ font-family: "Lato", sans-serif;
     --margin-left: 2rem;
 }
 
-
-
 /*  -------------------------------------------------------------------------------
                                 2. GLOBAL STYLES
     ------------------------------------------------------------------------------- */
@@ -520,7 +518,8 @@ article.jordan {
     border-radius: var(--border-radius);
 }
 
-.three-articles h1, .h1-support  {
+.three-articles h1,
+.h1-support {
     color: #fff;
     font: var(--fw-m) var(--font-size-l) / 1.2 var(--primary-font);
     background-color: var(--primary-clr-dark);
@@ -742,6 +741,7 @@ section.map_items ul ul ul li::before {
 
 label:not(#i-agree-label) {
     margin: 3px 0;
+    font-family: var(--secondary-font);
 }
 
 .floating-element {
@@ -804,6 +804,7 @@ input[type="checkbox"]:hover {
 .form-group {
     display: grid;
     font-size: var(--font-size-s);
+    font-family: var(--secondary-font);
 }
 
 .form-group-CB:has(#i-agree) {
@@ -813,6 +814,7 @@ input[type="checkbox"]:hover {
 }
 
 .form-group-CB {
+    font-family: var(--secondary-font);
     font-size: var(--font-size-xs);
     margin: 1rem 0 0 0;
     word-spacing: 1px;
@@ -947,7 +949,7 @@ a.cta-button:focus-visible {
     border-radius: 10px;
     box-shadow: 0 4px 8px #000000;
     width: 300px;
-    min-width: 100px;
+    
     margin: 0 auto;
     background-color: var(--primary-clr-dark);
 }
@@ -971,8 +973,8 @@ a.cta-button:focus-visible {
 }
 
 .input-box {
-    width: 250px;
-    margin: 15px 0;
+    width: 100%;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -984,6 +986,7 @@ a.cta-button:focus-visible {
 }
 
 .remember-forgot {
+    font-family: var(--secondary-font);
     margin: 0 0 10px;
     font-size: 1.3rem;
 }
@@ -991,18 +994,19 @@ a.cta-button:focus-visible {
 #account-p {
     margin-left: 20px;
     margin-top: 10px;
+    font-family: var(--secondary-font);
 }
 
 #forgot-password {
     color: var(--accent-clr);
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #register {
     color: var(--accent-clr);
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #forgot-password:hover {
@@ -1121,10 +1125,13 @@ main.products p {
     color: white;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
+    font-family: var(--primary-font);
     font-size: var(--font-size-m);
     cursor: pointer;
     border: 1px solid var(--primary-clr-dark);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    text-align: center;
 }
 
 .form-group:has(.contact-us-btn) {
@@ -1138,7 +1145,8 @@ main.products p {
 #support-phone-number:hover {
     text-decoration: underline;
 }
-.icon-support, .icon-call {
+.icon-support,
+.icon-call {
     color: var(--primary-clr-dark);
 }
 
@@ -1253,7 +1261,7 @@ main.products p {
     section.about_us_text img {
         padding-top: 3rem;
     }
-
+    
     .six-articles {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1365,8 +1373,12 @@ main.products p {
         color: red;
     }
 
-    footer a:active { color: green; }
-    .floating-element-my-account { width: 380px; }
+    footer a:active {
+        color: green;
+    }
+    .floating-element-my-account {
+        width: 380px;
+    }
 
     #login {
         font-size: var(--font-size-l);
@@ -1377,7 +1389,7 @@ main.products p {
     }
 
     .input-box {
-        width: 250px;
+        width: auto;
     }
 
     .icon {
@@ -1532,11 +1544,11 @@ main.products p {
     }
 
     #forgot-password {
-        margin-left: 150px;
+        margin-left: 110px;
     }
 
     #register {
-        margin-left: 150px;
+        margin-left: 110px;
     }
 }
 
